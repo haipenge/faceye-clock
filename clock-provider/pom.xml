@@ -2,8 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<!-- <parent> <groupId>org.faceye</groupId> <artifactId>faceye-generate-feature</artifactId> 
-		<version>1.0</version> <relativePath>../parent/</relativePath> </parent> -->
+	<!-- <parent> <groupId>org.faceye</groupId> <artifactId>faceye-generate-feature</artifactId> <version>1.0</version> <relativePath>../parent/</relativePath> 
+		</parent> -->
 	<groupId>com.faceye</groupId>
 	<artifactId>clock-provider</artifactId>
 	<version>1.0</version>
@@ -23,7 +23,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-starter-parent</artifactId>
-				<version>Dalston SR1</version>
+				<version>Dalston.SR1</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
