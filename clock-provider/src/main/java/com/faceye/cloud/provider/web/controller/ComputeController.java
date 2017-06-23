@@ -1,4 +1,4 @@
-package com.faceye.cloud.web.controller;
+package com.faceye.cloud.provider.web.controller;
 
 
 import org.apache.log4j.Logger;
