@@ -34,4 +34,4 @@
 /*.tar.gz
 /db
 /build*.xml
-.DS_Store
+**/**.DS_Store

@@ -1,10 +1,10 @@
-package com.faceye.cloud.service.impl;
+package com.faceye.component.api.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.faceye.cloud.service.CustomerService;
+import com.faceye.component.api.service.CustomerService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @Service

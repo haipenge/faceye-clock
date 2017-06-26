@@ -1,4 +1,4 @@
-package com.faceye.cloud.web.controller;
+package com.faceye.component.api.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import com.faceye.cloud.service.ClientService;
-import com.faceye.cloud.service.CustomerService;
+import com.faceye.component.api.service.ClientService;
+import com.faceye.component.api.service.CustomerService;
 @RestController
 public class ClientController {
 	@Autowired

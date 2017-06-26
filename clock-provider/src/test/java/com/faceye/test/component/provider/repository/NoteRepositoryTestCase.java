@@ -15,6 +15,7 @@ import com.faceye.component.Application;
 import com.faceye.component.provider.entity.Note;
 import com.faceye.component.provider.repository.jpa.NoteRepository;
 
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = Application.class)
 @Rollback(true)
@@ -23,6 +24,7 @@ public class NoteRepositoryTestCase {
 	@Autowired
 	private NoteRepository noteRepository=null;
 	@Test
+	@Rollback(true)
 	public void testSaveNote() throws Exception{
 		Note note=new Note();
 		note.setTitle("I am a test note");

@@ -12,9 +12,6 @@ import org.springframework.security.access.vote.AuthenticatedVoter;
 import org.springframework.security.access.vote.RoleVoter;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
-import org.springframework.security.authentication.ProviderManager;
-import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
-import org.springframework.security.authentication.dao.ReflectionSaltSource;
 import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
 
 import com.faceye.component.security.web.service.UserService;

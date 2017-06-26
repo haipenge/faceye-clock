@@ -1,11 +1,11 @@
-package com.faceye.cloud.service;
+package com.faceye.component.api.service;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.faceye.cloud.service.impl.ClientServiceHystrix;
+import com.faceye.component.api.service.impl.ClientServiceHystrix;
 
 @FeignClient(value="clock-provider",fallback =ClientServiceHystrix.class)
 public interface ClientService {
