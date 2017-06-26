@@ -1,6 +1,6 @@
-package com.faceye.cloud.provider.repository.jpa;
+package com.faceye.component.provider.repository.jpa;
 
-import com.faceye.cloud.provider.entity.Note;
+import com.faceye.component.provider.entity.Note;
 import com.faceye.feature.repository.jpa.BaseRepository;
 
 public interface NoteRepository extends BaseRepository<Note, Long> {

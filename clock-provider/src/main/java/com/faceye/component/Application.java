@@ -1,4 +1,4 @@
-package com.faceye.cloud;
+package com.faceye.component;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;

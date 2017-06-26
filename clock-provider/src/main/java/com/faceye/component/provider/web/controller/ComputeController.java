@@ -1,4 +1,4 @@
-package com.faceye.cloud.provider.web.controller;
+package com.faceye.component.provider.web.controller;
 
 
 import org.apache.log4j.Logger;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ComputeController {
 	private final Logger logger = Logger.getLogger(getClass());
 	
-	@Value("${quick.start.env}")
+//	@Value("${quick.start.env}")
 	private String env="";
 
     @Autowired

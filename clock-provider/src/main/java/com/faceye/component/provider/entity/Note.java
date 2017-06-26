@@ -1,4 +1,4 @@
-package com.faceye.cloud.provider.entity;
+package com.faceye.component.provider.entity;
 
 import java.io.Serializable;
 import java.util.Date;
