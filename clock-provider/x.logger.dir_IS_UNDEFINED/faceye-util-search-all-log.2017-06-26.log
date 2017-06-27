@@ -1,0 +1,1236 @@
+2017-06-26 17:20:43.743 [main]
+				INFO  c.f.t.c.p.r.NoteRepositoryTestCase - No active profile set, falling back to default profiles: default
+2017-06-26 17:20:46.337 [main]
+				ERROR o.a.tomcat.jdbc.pool.ConnectionPool - Unable to create initial connections of pool.
+java.sql.SQLException: The url cannot be null
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:308)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:732)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:664)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:479)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:88)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:254)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:228)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:51)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.handleTypes(MetadataBuildingProcess.java:352)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:111)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:847)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:874)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:353)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:370)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:359)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:856)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+2017-06-26 17:20:47.555 [main]
+				ERROR o.a.tomcat.jdbc.pool.ConnectionPool - Unable to create initial connections of pool.
+java.sql.SQLException: The url cannot be null
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:308)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:732)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:664)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:479)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.tool.schema.internal.TargetDatabaseImpl.prepare(TargetDatabaseImpl.java:38)
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.doMigration(SchemaMigratorImpl.java:57)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:134)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:101)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:472)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:879)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:353)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:370)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:359)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:856)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+2017-06-26 17:20:47.578 [main]
+				ERROR o.s.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/faceye/component/JpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: feature] Unable to build Hibernate SessionFactory
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:856)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: feature] Unable to build Hibernate SessionFactory
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.persistenceException(EntityManagerFactoryBuilderImpl.java:954)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:882)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:353)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:370)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:359)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 40 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Unable to open JDBC connection for schema management target
+	at org.hibernate.tool.schema.internal.TargetDatabaseImpl.prepare(TargetDatabaseImpl.java:42)
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.doMigration(SchemaMigratorImpl.java:57)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:134)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:101)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:472)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:879)
+	... 46 common frames omitted
+Caused by: java.sql.SQLException: The url cannot be null
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:308)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:732)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:664)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:479)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.tool.schema.internal.TargetDatabaseImpl.prepare(TargetDatabaseImpl.java:38)
+	... 52 common frames omitted
+2017-06-26 17:20:47.583 [main]
+				ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@756b2d90] to prepare test instance [com.faceye.test.component.provider.repository.NoteRepositoryTestCase@3520958b]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/faceye/component/JpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: feature] Unable to build Hibernate SessionFactory
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:856)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 common frames omitted
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: feature] Unable to build Hibernate SessionFactory
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.persistenceException(EntityManagerFactoryBuilderImpl.java:954)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:882)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:353)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:370)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:359)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 40 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Unable to open JDBC connection for schema management target
+	at org.hibernate.tool.schema.internal.TargetDatabaseImpl.prepare(TargetDatabaseImpl.java:42)
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.doMigration(SchemaMigratorImpl.java:57)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:134)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:101)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:472)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:879)
+	... 46 common frames omitted
+Caused by: java.sql.SQLException: The url cannot be null
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:308)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:732)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:664)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:479)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.tool.schema.internal.TargetDatabaseImpl.prepare(TargetDatabaseImpl.java:38)
+	... 52 common frames omitted
+2017-06-26 17:23:18.786 [main]
+				INFO  c.f.t.c.p.r.NoteRepositoryTestCase - No active profile set, falling back to default profiles: default
+2017-06-26 17:23:27.892 [main]
+				WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2017-06-26 17:23:27.892 [main]
+				INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-26 17:23:27.903 [main]
+				WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2017-06-26 17:23:27.904 [main]
+				INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-26 17:23:28.355 [main]
+				INFO  c.f.t.c.p.r.NoteRepositoryTestCase - Started NoteRepositoryTestCase in 14.089 seconds (JVM running for 15.269)
+2017-06-26 17:23:29.006 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2017-06-26 17:23:29.985 [Thread-6]
+				INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2017-06-26 17:23:29.986 [Thread-6]
+				INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2017-06-26 17:23:30.150 [Thread-6]
+				INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2017-06-26 17:23:30.150 [Thread-6]
+				INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2017-06-26 17:23:30.450 [Thread-6]
+				INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2017-06-26 17:23:30.451 [Thread-6]
+				DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2017-06-26 17:23:30.454 [Thread-6]
+				DEBUG c.n.d.s.r.aws.ConfigClusterResolver - Config resolved to [AwsEndpoint{ serviceUrl='http://localhost:8888/eureka/', region='us-east-1', zone='defaultZone'}]
+2017-06-26 17:23:30.839 [Thread-6]
+				DEBUG c.n.d.s.r.a.ZoneAffinityClusterResolver - Local zone=defaultZone; resolved to: [AwsEndpoint{ serviceUrl='http://localhost:8888/eureka/', region='us-east-1', zone='defaultZone'}]
+2017-06-26 17:23:30.866 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2017-06-26 17:23:30.866 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2017-06-26 17:23:30.866 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2017-06-26 17:23:30.866 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2017-06-26 17:23:30.866 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2017-06-26 17:23:30.866 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2017-06-26 17:23:30.867 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2017-06-26 17:23:30.867 [Thread-6]
+				DEBUG c.n.d.s.t.d.SessionedEurekaHttpClient - Ending a session and starting anew
+2017-06-26 17:23:30.873 [Thread-6]
+				DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient - Created client for url: http://localhost:8888/eureka/
+2017-06-26 17:23:30.954 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Get connection: {}->http://localhost:8888, timeout = 5000
+2017-06-26 17:23:30.955 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - [{}->http://localhost:8888] total kept alive: 0, total issued: 0, total allocated: 0 out of 200
+2017-06-26 17:23:30.955 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - No free connections [{}->http://localhost:8888][null]
+2017-06-26 17:23:30.956 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Available capacity: 50 out of 50 [{}->http://localhost:8888][null]
+2017-06-26 17:23:30.956 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Creating new connection [{}->http://localhost:8888]
+2017-06-26 17:23:31.393 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Released connection is reusable.
+2017-06-26 17:23:31.394 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Releasing connection [{}->http://localhost:8888][null]
+2017-06-26 17:23:31.394 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Pooling connection [{}->http://localhost:8888][null]; keep alive indefinitely
+2017-06-26 17:23:31.394 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Notifying no-one, there are no waiting threads
+2017-06-26 17:23:31.396 [Thread-6]
+				DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient - Jersey HTTP GET http://localhost:8888/eureka//apps/?; statusCode=200
+2017-06-26 17:23:31.397 [Thread-6]
+				DEBUG c.n.d.s.t.d.RedirectingEurekaHttpClient - Pinning to endpoint null
+2017-06-26 17:23:31.397 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2017-06-26 17:23:31.397 [Thread-6]
+				DEBUG c.netflix.discovery.DiscoveryClient - Got full registry with apps hashcode 
+2017-06-26 17:23:31.398 [Thread-6]
+				DEBUG c.netflix.discovery.DiscoveryClient - The total number of all instances in the client now is 0
+2017-06-26 17:23:31.400 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2017-06-26 17:23:31.404 [Thread-6]
+				INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-26 17:23:31.408 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1498469011407 with initial instances count: 0
+2017-06-26 17:23:31.465 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2017-06-26 17:23:31.466 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2017-06-26 17:23:31.467 [Thread-6]
+				DEBUG c.n.d.s.t.d.SessionedEurekaHttpClient - Ending a session and starting anew
+2017-06-26 17:23:31.467 [Thread-6]
+				DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient - Created client for url: http://localhost:8888/eureka/
+2017-06-26 17:23:31.469 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Get connection: {}->http://localhost:8888, timeout = 5000
+2017-06-26 17:23:31.469 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - [{}->http://localhost:8888] total kept alive: 1, total issued: 0, total allocated: 1 out of 200
+2017-06-26 17:23:31.469 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Getting free connection [{}->http://localhost:8888][null]
+2017-06-26 17:23:31.512 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Released connection is reusable.
+2017-06-26 17:23:31.512 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Releasing connection [{}->http://localhost:8888][null]
+2017-06-26 17:23:31.512 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Pooling connection [{}->http://localhost:8888][null]; keep alive indefinitely
+2017-06-26 17:23:31.512 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Notifying no-one, there are no waiting threads
+2017-06-26 17:23:31.513 [Thread-6]
+				DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient - Jersey HTTP DELETE http://localhost:8888/eureka//apps/CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1; statusCode=404
+2017-06-26 17:23:31.513 [Thread-6]
+				DEBUG c.n.d.s.t.d.RedirectingEurekaHttpClient - Pinning to endpoint null
+2017-06-26 17:23:31.513 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
+2017-06-26 17:23:31.529 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Closing connections idle longer than 0 SECONDS
+2017-06-26 17:23:31.530 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Closing connections idle longer than 0 SECONDS
+2017-06-26 17:23:31.530 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Closing connection last used @ Mon Jun 26 17:23:31 CST 2017
+2017-06-26 17:23:31.530 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Deleting connection [{}->http://localhost:8888][null]
+2017-06-26 17:23:31.531 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Closing connections idle longer than 0 SECONDS
+2017-06-26 17:23:31.532 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Closing connections idle longer than 0 SECONDS
+2017-06-26 17:23:31.760 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2017-06-26 17:25:59.928 [main]
+				INFO  c.f.t.c.p.r.NoteRepositoryTestCase - No active profile set, falling back to default profiles: default
+2017-06-26 17:26:11.646 [main]
+				WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2017-06-26 17:26:11.646 [main]
+				INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-26 17:26:11.653 [main]
+				WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2017-06-26 17:26:11.654 [main]
+				INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-26 17:26:12.404 [main]
+				INFO  c.f.t.c.p.r.NoteRepositoryTestCase - Started NoteRepositoryTestCase in 16.881 seconds (JVM running for 18.008)
+2017-06-26 17:26:13.509 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2017-06-26 17:26:14.422 [Thread-6]
+				INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2017-06-26 17:26:14.422 [Thread-6]
+				INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2017-06-26 17:26:14.616 [Thread-6]
+				INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2017-06-26 17:26:14.616 [Thread-6]
+				INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2017-06-26 17:26:14.927 [Thread-6]
+				INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2017-06-26 17:26:14.931 [Thread-6]
+				DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2017-06-26 17:26:14.934 [Thread-6]
+				DEBUG c.n.d.s.r.aws.ConfigClusterResolver - Config resolved to [AwsEndpoint{ serviceUrl='http://localhost:8888/eureka/', region='us-east-1', zone='defaultZone'}]
+2017-06-26 17:26:15.264 [Thread-6]
+				DEBUG c.n.d.s.r.a.ZoneAffinityClusterResolver - Local zone=defaultZone; resolved to: [AwsEndpoint{ serviceUrl='http://localhost:8888/eureka/', region='us-east-1', zone='defaultZone'}]
+2017-06-26 17:26:15.286 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2017-06-26 17:26:15.286 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2017-06-26 17:26:15.286 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2017-06-26 17:26:15.287 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2017-06-26 17:26:15.287 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2017-06-26 17:26:15.287 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2017-06-26 17:26:15.287 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2017-06-26 17:26:15.287 [Thread-6]
+				DEBUG c.n.d.s.t.d.SessionedEurekaHttpClient - Ending a session and starting anew
+2017-06-26 17:26:15.293 [Thread-6]
+				DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient - Created client for url: http://localhost:8888/eureka/
+2017-06-26 17:26:15.383 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Get connection: {}->http://localhost:8888, timeout = 5000
+2017-06-26 17:26:15.384 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - [{}->http://localhost:8888] total kept alive: 0, total issued: 0, total allocated: 0 out of 200
+2017-06-26 17:26:15.384 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - No free connections [{}->http://localhost:8888][null]
+2017-06-26 17:26:15.384 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Available capacity: 50 out of 50 [{}->http://localhost:8888][null]
+2017-06-26 17:26:15.384 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Creating new connection [{}->http://localhost:8888]
+2017-06-26 17:26:15.485 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Released connection is reusable.
+2017-06-26 17:26:15.486 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Releasing connection [{}->http://localhost:8888][null]
+2017-06-26 17:26:15.486 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Pooling connection [{}->http://localhost:8888][null]; keep alive indefinitely
+2017-06-26 17:26:15.486 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Notifying no-one, there are no waiting threads
+2017-06-26 17:26:15.488 [Thread-6]
+				DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient - Jersey HTTP GET http://localhost:8888/eureka//apps/?; statusCode=200
+2017-06-26 17:26:15.488 [Thread-6]
+				DEBUG c.n.d.s.t.d.RedirectingEurekaHttpClient - Pinning to endpoint null
+2017-06-26 17:26:15.488 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2017-06-26 17:26:15.489 [Thread-6]
+				DEBUG c.netflix.discovery.DiscoveryClient - Got full registry with apps hashcode 
+2017-06-26 17:26:15.489 [Thread-6]
+				DEBUG c.netflix.discovery.DiscoveryClient - The total number of all instances in the client now is 0
+2017-06-26 17:26:15.491 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2017-06-26 17:26:15.496 [Thread-6]
+				INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-26 17:26:15.501 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1498469175500 with initial instances count: 0
+2017-06-26 17:26:15.567 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2017-06-26 17:26:15.568 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2017-06-26 17:26:15.570 [Thread-6]
+				DEBUG c.n.d.s.t.d.SessionedEurekaHttpClient - Ending a session and starting anew
+2017-06-26 17:26:15.570 [Thread-6]
+				DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient - Created client for url: http://localhost:8888/eureka/
+2017-06-26 17:26:15.572 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Get connection: {}->http://localhost:8888, timeout = 5000
+2017-06-26 17:26:15.572 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - [{}->http://localhost:8888] total kept alive: 1, total issued: 0, total allocated: 1 out of 200
+2017-06-26 17:26:15.572 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Getting free connection [{}->http://localhost:8888][null]
+2017-06-26 17:26:15.599 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Released connection is reusable.
+2017-06-26 17:26:15.599 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Releasing connection [{}->http://localhost:8888][null]
+2017-06-26 17:26:15.599 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Pooling connection [{}->http://localhost:8888][null]; keep alive indefinitely
+2017-06-26 17:26:15.599 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Notifying no-one, there are no waiting threads
+2017-06-26 17:26:15.599 [Thread-6]
+				DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient - Jersey HTTP DELETE http://localhost:8888/eureka//apps/CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1; statusCode=404
+2017-06-26 17:26:15.600 [Thread-6]
+				DEBUG c.n.d.s.t.d.RedirectingEurekaHttpClient - Pinning to endpoint null
+2017-06-26 17:26:15.600 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
+2017-06-26 17:26:15.613 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Closing connections idle longer than 0 SECONDS
+2017-06-26 17:26:15.613 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Closing connections idle longer than 0 SECONDS
+2017-06-26 17:26:15.614 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Closing connection last used @ Mon Jun 26 17:26:15 CST 2017
+2017-06-26 17:26:15.614 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Deleting connection [{}->http://localhost:8888][null]
+2017-06-26 17:26:15.615 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Closing connections idle longer than 0 SECONDS
+2017-06-26 17:26:15.615 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Closing connections idle longer than 0 SECONDS
+2017-06-26 17:26:15.617 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2017-06-26 17:26:35.191 [main]
+				INFO  c.f.t.c.p.r.NoteRepositoryTestCase - No active profile set, falling back to default profiles: default
+2017-06-26 17:26:37.896 [main]
+				ERROR o.a.tomcat.jdbc.pool.ConnectionPool - Unable to create initial connections of pool.
+java.sql.SQLException: The url cannot be null
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:308)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:732)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:664)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:479)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:88)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:254)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:228)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:51)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.handleTypes(MetadataBuildingProcess.java:352)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:111)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:847)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:874)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:353)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:370)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:359)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:856)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+2017-06-26 17:26:39.437 [main]
+				ERROR o.a.tomcat.jdbc.pool.ConnectionPool - Unable to create initial connections of pool.
+java.sql.SQLException: The url cannot be null
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:308)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:732)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:664)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:479)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.tool.schema.internal.TargetDatabaseImpl.prepare(TargetDatabaseImpl.java:38)
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.doMigration(SchemaMigratorImpl.java:57)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:134)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:101)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:472)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:879)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:353)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:370)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:359)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:856)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+2017-06-26 17:26:39.460 [main]
+				ERROR o.s.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/faceye/component/JpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: feature] Unable to build Hibernate SessionFactory
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:856)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: feature] Unable to build Hibernate SessionFactory
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.persistenceException(EntityManagerFactoryBuilderImpl.java:954)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:882)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:353)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:370)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:359)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 40 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Unable to open JDBC connection for schema management target
+	at org.hibernate.tool.schema.internal.TargetDatabaseImpl.prepare(TargetDatabaseImpl.java:42)
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.doMigration(SchemaMigratorImpl.java:57)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:134)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:101)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:472)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:879)
+	... 46 common frames omitted
+Caused by: java.sql.SQLException: The url cannot be null
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:308)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:732)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:664)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:479)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.tool.schema.internal.TargetDatabaseImpl.prepare(TargetDatabaseImpl.java:38)
+	... 52 common frames omitted
+2017-06-26 17:26:39.463 [main]
+				ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@22f02996] to prepare test instance [com.faceye.test.component.provider.repository.NoteRepositoryTestCase@7c8874ef]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/faceye/component/JpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: feature] Unable to build Hibernate SessionFactory
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:856)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 common frames omitted
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: feature] Unable to build Hibernate SessionFactory
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.persistenceException(EntityManagerFactoryBuilderImpl.java:954)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:882)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:353)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:370)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:359)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 40 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Unable to open JDBC connection for schema management target
+	at org.hibernate.tool.schema.internal.TargetDatabaseImpl.prepare(TargetDatabaseImpl.java:42)
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.doMigration(SchemaMigratorImpl.java:57)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:134)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:101)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:472)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:879)
+	... 46 common frames omitted
+Caused by: java.sql.SQLException: The url cannot be null
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:308)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:732)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:664)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:479)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.tool.schema.internal.TargetDatabaseImpl.prepare(TargetDatabaseImpl.java:38)
+	... 52 common frames omitted
+2017-06-26 17:28:51.492 [main]
+				INFO  c.f.t.c.p.r.NoteRepositoryTestCase - No active profile set, falling back to default profiles: default
+2017-06-26 17:29:00.819 [main]
+				WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2017-06-26 17:29:00.819 [main]
+				INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-26 17:29:00.829 [main]
+				WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2017-06-26 17:29:00.829 [main]
+				INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-26 17:29:01.703 [main]
+				INFO  c.f.t.c.p.r.NoteRepositoryTestCase - Started NoteRepositoryTestCase in 14.665 seconds (JVM running for 15.845)
+2017-06-26 17:29:02.563 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2017-06-26 17:29:03.385 [Thread-6]
+				INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2017-06-26 17:29:03.386 [Thread-6]
+				INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2017-06-26 17:29:03.540 [Thread-6]
+				INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2017-06-26 17:29:03.540 [Thread-6]
+				INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2017-06-26 17:29:03.827 [Thread-6]
+				INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2017-06-26 17:29:03.828 [Thread-6]
+				DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2017-06-26 17:29:03.848 [Thread-6]
+				DEBUG c.n.d.s.r.aws.ConfigClusterResolver - Config resolved to [AwsEndpoint{ serviceUrl='http://localhost:8888/eureka/', region='us-east-1', zone='defaultZone'}]
+2017-06-26 17:29:04.209 [Thread-6]
+				DEBUG c.n.d.s.r.a.ZoneAffinityClusterResolver - Local zone=defaultZone; resolved to: [AwsEndpoint{ serviceUrl='http://localhost:8888/eureka/', region='us-east-1', zone='defaultZone'}]
+2017-06-26 17:29:04.230 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2017-06-26 17:29:04.231 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2017-06-26 17:29:04.231 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2017-06-26 17:29:04.231 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2017-06-26 17:29:04.231 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2017-06-26 17:29:04.231 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2017-06-26 17:29:04.231 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2017-06-26 17:29:04.232 [Thread-6]
+				DEBUG c.n.d.s.t.d.SessionedEurekaHttpClient - Ending a session and starting anew
+2017-06-26 17:29:04.236 [Thread-6]
+				DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient - Created client for url: http://localhost:8888/eureka/
+2017-06-26 17:29:04.291 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Get connection: {}->http://localhost:8888, timeout = 5000
+2017-06-26 17:29:04.292 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - [{}->http://localhost:8888] total kept alive: 0, total issued: 0, total allocated: 0 out of 200
+2017-06-26 17:29:04.292 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - No free connections [{}->http://localhost:8888][null]
+2017-06-26 17:29:04.292 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Available capacity: 50 out of 50 [{}->http://localhost:8888][null]
+2017-06-26 17:29:04.292 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Creating new connection [{}->http://localhost:8888]
+2017-06-26 17:29:04.350 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Released connection is reusable.
+2017-06-26 17:29:04.350 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Releasing connection [{}->http://localhost:8888][null]
+2017-06-26 17:29:04.350 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Pooling connection [{}->http://localhost:8888][null]; keep alive indefinitely
+2017-06-26 17:29:04.350 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Notifying no-one, there are no waiting threads
+2017-06-26 17:29:04.351 [Thread-6]
+				DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient - Jersey HTTP GET http://localhost:8888/eureka//apps/?; statusCode=200
+2017-06-26 17:29:04.351 [Thread-6]
+				DEBUG c.n.d.s.t.d.RedirectingEurekaHttpClient - Pinning to endpoint null
+2017-06-26 17:29:04.352 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2017-06-26 17:29:04.352 [Thread-6]
+				DEBUG c.netflix.discovery.DiscoveryClient - Got full registry with apps hashcode 
+2017-06-26 17:29:04.352 [Thread-6]
+				DEBUG c.netflix.discovery.DiscoveryClient - The total number of all instances in the client now is 0
+2017-06-26 17:29:04.353 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2017-06-26 17:29:04.356 [Thread-6]
+				INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-26 17:29:04.359 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1498469344359 with initial instances count: 0
+2017-06-26 17:29:04.445 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2017-06-26 17:29:04.446 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2017-06-26 17:29:04.447 [Thread-6]
+				DEBUG c.n.d.s.t.d.SessionedEurekaHttpClient - Ending a session and starting anew
+2017-06-26 17:29:04.448 [Thread-6]
+				DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient - Created client for url: http://localhost:8888/eureka/
+2017-06-26 17:29:04.449 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Get connection: {}->http://localhost:8888, timeout = 5000
+2017-06-26 17:29:04.450 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - [{}->http://localhost:8888] total kept alive: 1, total issued: 0, total allocated: 1 out of 200
+2017-06-26 17:29:04.450 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Getting free connection [{}->http://localhost:8888][null]
+2017-06-26 17:29:04.458 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Released connection is reusable.
+2017-06-26 17:29:04.458 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Releasing connection [{}->http://localhost:8888][null]
+2017-06-26 17:29:04.458 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Pooling connection [{}->http://localhost:8888][null]; keep alive indefinitely
+2017-06-26 17:29:04.458 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Notifying no-one, there are no waiting threads
+2017-06-26 17:29:04.459 [Thread-6]
+				DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient - Jersey HTTP DELETE http://localhost:8888/eureka//apps/CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1; statusCode=404
+2017-06-26 17:29:04.459 [Thread-6]
+				DEBUG c.n.d.s.t.d.RedirectingEurekaHttpClient - Pinning to endpoint null
+2017-06-26 17:29:04.459 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
+2017-06-26 17:29:04.470 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Closing connections idle longer than 0 SECONDS
+2017-06-26 17:29:04.471 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Closing connections idle longer than 0 SECONDS
+2017-06-26 17:29:04.471 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Closing connection last used @ Mon Jun 26 17:29:04 CST 2017
+2017-06-26 17:29:04.471 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Deleting connection [{}->http://localhost:8888][null]
+2017-06-26 17:29:04.472 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Closing connections idle longer than 0 SECONDS
+2017-06-26 17:29:04.472 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Closing connections idle longer than 0 SECONDS
+2017-06-26 17:29:04.475 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2017-06-26 17:31:19.191 [main]
+				INFO  c.f.t.c.p.r.NoteRepositoryTestCase - No active profile set, falling back to default profiles: default
+2017-06-26 17:31:28.919 [main]
+				WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2017-06-26 17:31:28.942 [main]
+				INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-26 17:31:28.952 [main]
+				WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2017-06-26 17:31:28.953 [main]
+				INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-26 17:31:29.390 [main]
+				INFO  c.f.t.c.p.r.NoteRepositoryTestCase - Started NoteRepositoryTestCase in 14.85 seconds (JVM running for 15.986)
+2017-06-26 17:31:30.491 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2017-06-26 17:31:31.292 [Thread-6]
+				INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2017-06-26 17:31:31.293 [Thread-6]
+				INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2017-06-26 17:31:31.479 [Thread-6]
+				INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2017-06-26 17:31:31.480 [Thread-6]
+				INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2017-06-26 17:31:31.774 [Thread-6]
+				INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2017-06-26 17:31:31.776 [Thread-6]
+				DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2017-06-26 17:31:32.342 [Thread-6]
+				DEBUG c.n.d.s.r.aws.ConfigClusterResolver - Config resolved to [AwsEndpoint{ serviceUrl='http://localhost:8888/eureka/', region='us-east-1', zone='defaultZone'}]
+2017-06-26 17:31:32.658 [Thread-6]
+				DEBUG c.n.d.s.r.a.ZoneAffinityClusterResolver - Local zone=defaultZone; resolved to: [AwsEndpoint{ serviceUrl='http://localhost:8888/eureka/', region='us-east-1', zone='defaultZone'}]
+2017-06-26 17:31:32.675 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2017-06-26 17:31:32.675 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2017-06-26 17:31:32.675 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2017-06-26 17:31:32.675 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2017-06-26 17:31:32.676 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2017-06-26 17:31:32.676 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2017-06-26 17:31:32.676 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2017-06-26 17:31:32.677 [Thread-6]
+				DEBUG c.n.d.s.t.d.SessionedEurekaHttpClient - Ending a session and starting anew
+2017-06-26 17:31:32.681 [Thread-6]
+				DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient - Created client for url: http://localhost:8888/eureka/
+2017-06-26 17:31:32.733 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Get connection: {}->http://localhost:8888, timeout = 5000
+2017-06-26 17:31:32.734 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - [{}->http://localhost:8888] total kept alive: 0, total issued: 0, total allocated: 0 out of 200
+2017-06-26 17:31:32.734 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - No free connections [{}->http://localhost:8888][null]
+2017-06-26 17:31:32.734 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Available capacity: 50 out of 50 [{}->http://localhost:8888][null]
+2017-06-26 17:31:32.734 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Creating new connection [{}->http://localhost:8888]
+2017-06-26 17:31:32.785 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Released connection is reusable.
+2017-06-26 17:31:32.785 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Releasing connection [{}->http://localhost:8888][null]
+2017-06-26 17:31:32.785 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Pooling connection [{}->http://localhost:8888][null]; keep alive indefinitely
+2017-06-26 17:31:32.786 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Notifying no-one, there are no waiting threads
+2017-06-26 17:31:32.787 [Thread-6]
+				DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient - Jersey HTTP GET http://localhost:8888/eureka//apps/?; statusCode=200
+2017-06-26 17:31:32.787 [Thread-6]
+				DEBUG c.n.d.s.t.d.RedirectingEurekaHttpClient - Pinning to endpoint null
+2017-06-26 17:31:32.787 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2017-06-26 17:31:32.788 [Thread-6]
+				DEBUG c.netflix.discovery.DiscoveryClient - Got full registry with apps hashcode 
+2017-06-26 17:31:32.788 [Thread-6]
+				DEBUG c.netflix.discovery.DiscoveryClient - The total number of all instances in the client now is 0
+2017-06-26 17:31:32.789 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2017-06-26 17:31:32.795 [Thread-6]
+				INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-26 17:31:32.799 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1498469492799 with initial instances count: 0
+2017-06-26 17:31:32.853 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2017-06-26 17:31:32.854 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2017-06-26 17:31:32.856 [Thread-6]
+				DEBUG c.n.d.s.t.d.SessionedEurekaHttpClient - Ending a session and starting anew
+2017-06-26 17:31:32.856 [Thread-6]
+				DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient - Created client for url: http://localhost:8888/eureka/
+2017-06-26 17:31:32.858 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Get connection: {}->http://localhost:8888, timeout = 5000
+2017-06-26 17:31:32.858 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - [{}->http://localhost:8888] total kept alive: 1, total issued: 0, total allocated: 1 out of 200
+2017-06-26 17:31:32.858 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Getting free connection [{}->http://localhost:8888][null]
+2017-06-26 17:31:32.866 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Released connection is reusable.
+2017-06-26 17:31:32.867 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Releasing connection [{}->http://localhost:8888][null]
+2017-06-26 17:31:32.867 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Pooling connection [{}->http://localhost:8888][null]; keep alive indefinitely
+2017-06-26 17:31:32.867 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Notifying no-one, there are no waiting threads
+2017-06-26 17:31:32.867 [Thread-6]
+				DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient - Jersey HTTP DELETE http://localhost:8888/eureka//apps/CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1; statusCode=404
+2017-06-26 17:31:32.867 [Thread-6]
+				DEBUG c.n.d.s.t.d.RedirectingEurekaHttpClient - Pinning to endpoint null
+2017-06-26 17:31:32.867 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
+2017-06-26 17:31:32.879 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Closing connections idle longer than 0 SECONDS
+2017-06-26 17:31:32.879 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Closing connections idle longer than 0 SECONDS
+2017-06-26 17:31:32.880 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Closing connection last used @ Mon Jun 26 17:31:32 CST 2017
+2017-06-26 17:31:32.880 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Deleting connection [{}->http://localhost:8888][null]
+2017-06-26 17:31:32.880 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Closing connections idle longer than 0 SECONDS
+2017-06-26 17:31:32.880 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Closing connections idle longer than 0 SECONDS
+2017-06-26 17:31:32.885 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2017-06-26 17:32:14.289 [main]
+				INFO  c.f.t.c.p.r.NoteRepositoryTestCase - No active profile set, falling back to default profiles: default
+2017-06-26 17:32:23.949 [main]
+				WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2017-06-26 17:32:23.950 [main]
+				INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-26 17:32:23.958 [main]
+				WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2017-06-26 17:32:23.958 [main]
+				INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-26 17:32:24.352 [main]
+				INFO  c.f.t.c.p.r.NoteRepositoryTestCase - Started NoteRepositoryTestCase in 14.601 seconds (JVM running for 15.817)
+2017-06-26 17:32:25.300 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2017-06-26 17:32:26.187 [Thread-6]
+				INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2017-06-26 17:32:26.188 [Thread-6]
+				INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2017-06-26 17:32:26.334 [Thread-6]
+				INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2017-06-26 17:32:26.334 [Thread-6]
+				INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2017-06-26 17:32:26.633 [Thread-6]
+				INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2017-06-26 17:32:26.635 [Thread-6]
+				DEBUG c.n.discovery.endpoint.EndpointUtils - The availability zone for the given region us-east-1 are [defaultZone]
+2017-06-26 17:32:26.638 [Thread-6]
+				DEBUG c.n.d.s.r.aws.ConfigClusterResolver - Config resolved to [AwsEndpoint{ serviceUrl='http://localhost:8888/eureka/', region='us-east-1', zone='defaultZone'}]
+2017-06-26 17:32:27.000 [Thread-6]
+				DEBUG c.n.d.s.r.a.ZoneAffinityClusterResolver - Local zone=defaultZone; resolved to: [AwsEndpoint{ serviceUrl='http://localhost:8888/eureka/', region='us-east-1', zone='defaultZone'}]
+2017-06-26 17:32:27.025 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2017-06-26 17:32:27.026 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2017-06-26 17:32:27.026 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2017-06-26 17:32:27.026 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2017-06-26 17:32:27.026 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2017-06-26 17:32:27.026 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2017-06-26 17:32:27.026 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2017-06-26 17:32:27.027 [Thread-6]
+				DEBUG c.n.d.s.t.d.SessionedEurekaHttpClient - Ending a session and starting anew
+2017-06-26 17:32:27.033 [Thread-6]
+				DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient - Created client for url: http://localhost:8888/eureka/
+2017-06-26 17:32:27.103 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Get connection: {}->http://localhost:8888, timeout = 5000
+2017-06-26 17:32:27.105 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - [{}->http://localhost:8888] total kept alive: 0, total issued: 0, total allocated: 0 out of 200
+2017-06-26 17:32:27.105 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - No free connections [{}->http://localhost:8888][null]
+2017-06-26 17:32:27.105 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Available capacity: 50 out of 50 [{}->http://localhost:8888][null]
+2017-06-26 17:32:27.105 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Creating new connection [{}->http://localhost:8888]
+2017-06-26 17:32:27.166 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Released connection is reusable.
+2017-06-26 17:32:27.166 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Releasing connection [{}->http://localhost:8888][null]
+2017-06-26 17:32:27.166 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Pooling connection [{}->http://localhost:8888][null]; keep alive indefinitely
+2017-06-26 17:32:27.166 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Notifying no-one, there are no waiting threads
+2017-06-26 17:32:27.167 [Thread-6]
+				DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient - Jersey HTTP GET http://localhost:8888/eureka//apps/?; statusCode=200
+2017-06-26 17:32:27.168 [Thread-6]
+				DEBUG c.n.d.s.t.d.RedirectingEurekaHttpClient - Pinning to endpoint null
+2017-06-26 17:32:27.168 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2017-06-26 17:32:27.168 [Thread-6]
+				DEBUG c.netflix.discovery.DiscoveryClient - Got full registry with apps hashcode 
+2017-06-26 17:32:27.168 [Thread-6]
+				DEBUG c.netflix.discovery.DiscoveryClient - The total number of all instances in the client now is 0
+2017-06-26 17:32:27.170 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2017-06-26 17:32:27.173 [Thread-6]
+				INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-26 17:32:27.177 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1498469547177 with initial instances count: 0
+2017-06-26 17:32:27.232 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2017-06-26 17:32:27.232 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2017-06-26 17:32:27.233 [Thread-6]
+				DEBUG c.n.d.s.t.d.SessionedEurekaHttpClient - Ending a session and starting anew
+2017-06-26 17:32:27.234 [Thread-6]
+				DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient - Created client for url: http://localhost:8888/eureka/
+2017-06-26 17:32:27.235 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Get connection: {}->http://localhost:8888, timeout = 5000
+2017-06-26 17:32:27.236 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - [{}->http://localhost:8888] total kept alive: 1, total issued: 0, total allocated: 1 out of 200
+2017-06-26 17:32:27.236 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Getting free connection [{}->http://localhost:8888][null]
+2017-06-26 17:32:27.246 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Released connection is reusable.
+2017-06-26 17:32:27.247 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Releasing connection [{}->http://localhost:8888][null]
+2017-06-26 17:32:27.247 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Pooling connection [{}->http://localhost:8888][null]; keep alive indefinitely
+2017-06-26 17:32:27.247 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Notifying no-one, there are no waiting threads
+2017-06-26 17:32:27.247 [Thread-6]
+				DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient - Jersey HTTP DELETE http://localhost:8888/eureka//apps/CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1; statusCode=404
+2017-06-26 17:32:27.247 [Thread-6]
+				DEBUG c.n.d.s.t.d.RedirectingEurekaHttpClient - Pinning to endpoint null
+2017-06-26 17:32:27.248 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
+2017-06-26 17:32:27.259 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Closing connections idle longer than 0 SECONDS
+2017-06-26 17:32:27.259 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Closing connections idle longer than 0 SECONDS
+2017-06-26 17:32:27.260 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Closing connection last used @ Mon Jun 26 17:32:27 CST 2017
+2017-06-26 17:32:27.260 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Deleting connection [{}->http://localhost:8888][null]
+2017-06-26 17:32:27.260 [Thread-6]
+				DEBUG c.n.d.s.MonitoredConnectionManager - Closing connections idle longer than 0 SECONDS
+2017-06-26 17:32:27.261 [Thread-6]
+				DEBUG c.n.d.shared.NamedConnectionPool - Closing connections idle longer than 0 SECONDS
+2017-06-26 17:32:27.262 [Thread-6]
+				INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient

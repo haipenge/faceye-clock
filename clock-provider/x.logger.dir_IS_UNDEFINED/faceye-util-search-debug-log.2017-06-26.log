@@ -1,0 +1,350 @@
+2017-06-26 17:23:30.451 [Thread-6] DEBUG c.n.discovery.endpoint.EndpointUtils -
+				The availability zone for the given region us-east-1 are [defaultZone]
+2017-06-26 17:23:30.454 [Thread-6] DEBUG c.n.d.s.r.aws.ConfigClusterResolver -
+				Config resolved to [AwsEndpoint{ serviceUrl='http://localhost:8888/eureka/', region='us-east-1', zone='defaultZone'}]
+2017-06-26 17:23:30.839 [Thread-6] DEBUG c.n.d.s.r.a.ZoneAffinityClusterResolver -
+				Local zone=defaultZone; resolved to: [AwsEndpoint{ serviceUrl='http://localhost:8888/eureka/', region='us-east-1', zone='defaultZone'}]
+2017-06-26 17:23:30.867 [Thread-6] DEBUG c.n.d.s.t.d.SessionedEurekaHttpClient -
+				Ending a session and starting anew
+2017-06-26 17:23:30.873 [Thread-6] DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient -
+				Created client for url: http://localhost:8888/eureka/
+2017-06-26 17:23:30.954 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Get connection: {}->http://localhost:8888, timeout = 5000
+2017-06-26 17:23:30.955 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				[{}->http://localhost:8888] total kept alive: 0, total issued: 0, total allocated: 0 out of 200
+2017-06-26 17:23:30.955 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				No free connections [{}->http://localhost:8888][null]
+2017-06-26 17:23:30.956 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Available capacity: 50 out of 50 [{}->http://localhost:8888][null]
+2017-06-26 17:23:30.956 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Creating new connection [{}->http://localhost:8888]
+2017-06-26 17:23:31.393 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Released connection is reusable.
+2017-06-26 17:23:31.394 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Releasing connection [{}->http://localhost:8888][null]
+2017-06-26 17:23:31.394 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Pooling connection [{}->http://localhost:8888][null]; keep alive indefinitely
+2017-06-26 17:23:31.394 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Notifying no-one, there are no waiting threads
+2017-06-26 17:23:31.396 [Thread-6] DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient -
+				Jersey HTTP GET http://localhost:8888/eureka//apps/?; statusCode=200
+2017-06-26 17:23:31.397 [Thread-6] DEBUG c.n.d.s.t.d.RedirectingEurekaHttpClient -
+				Pinning to endpoint null
+2017-06-26 17:23:31.397 [Thread-6] DEBUG c.netflix.discovery.DiscoveryClient -
+				Got full registry with apps hashcode 
+2017-06-26 17:23:31.398 [Thread-6] DEBUG c.netflix.discovery.DiscoveryClient -
+				The total number of all instances in the client now is 0
+2017-06-26 17:23:31.467 [Thread-6] DEBUG c.n.d.s.t.d.SessionedEurekaHttpClient -
+				Ending a session and starting anew
+2017-06-26 17:23:31.467 [Thread-6] DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient -
+				Created client for url: http://localhost:8888/eureka/
+2017-06-26 17:23:31.469 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Get connection: {}->http://localhost:8888, timeout = 5000
+2017-06-26 17:23:31.469 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				[{}->http://localhost:8888] total kept alive: 1, total issued: 0, total allocated: 1 out of 200
+2017-06-26 17:23:31.469 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Getting free connection [{}->http://localhost:8888][null]
+2017-06-26 17:23:31.512 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Released connection is reusable.
+2017-06-26 17:23:31.512 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Releasing connection [{}->http://localhost:8888][null]
+2017-06-26 17:23:31.512 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Pooling connection [{}->http://localhost:8888][null]; keep alive indefinitely
+2017-06-26 17:23:31.512 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Notifying no-one, there are no waiting threads
+2017-06-26 17:23:31.513 [Thread-6] DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient -
+				Jersey HTTP DELETE http://localhost:8888/eureka//apps/CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1; statusCode=404
+2017-06-26 17:23:31.513 [Thread-6] DEBUG c.n.d.s.t.d.RedirectingEurekaHttpClient -
+				Pinning to endpoint null
+2017-06-26 17:23:31.529 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Closing connections idle longer than 0 SECONDS
+2017-06-26 17:23:31.530 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Closing connections idle longer than 0 SECONDS
+2017-06-26 17:23:31.530 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Closing connection last used @ Mon Jun 26 17:23:31 CST 2017
+2017-06-26 17:23:31.530 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Deleting connection [{}->http://localhost:8888][null]
+2017-06-26 17:23:31.531 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Closing connections idle longer than 0 SECONDS
+2017-06-26 17:23:31.532 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Closing connections idle longer than 0 SECONDS
+2017-06-26 17:26:14.931 [Thread-6] DEBUG c.n.discovery.endpoint.EndpointUtils -
+				The availability zone for the given region us-east-1 are [defaultZone]
+2017-06-26 17:26:14.934 [Thread-6] DEBUG c.n.d.s.r.aws.ConfigClusterResolver -
+				Config resolved to [AwsEndpoint{ serviceUrl='http://localhost:8888/eureka/', region='us-east-1', zone='defaultZone'}]
+2017-06-26 17:26:15.264 [Thread-6] DEBUG c.n.d.s.r.a.ZoneAffinityClusterResolver -
+				Local zone=defaultZone; resolved to: [AwsEndpoint{ serviceUrl='http://localhost:8888/eureka/', region='us-east-1', zone='defaultZone'}]
+2017-06-26 17:26:15.287 [Thread-6] DEBUG c.n.d.s.t.d.SessionedEurekaHttpClient -
+				Ending a session and starting anew
+2017-06-26 17:26:15.293 [Thread-6] DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient -
+				Created client for url: http://localhost:8888/eureka/
+2017-06-26 17:26:15.383 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Get connection: {}->http://localhost:8888, timeout = 5000
+2017-06-26 17:26:15.384 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				[{}->http://localhost:8888] total kept alive: 0, total issued: 0, total allocated: 0 out of 200
+2017-06-26 17:26:15.384 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				No free connections [{}->http://localhost:8888][null]
+2017-06-26 17:26:15.384 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Available capacity: 50 out of 50 [{}->http://localhost:8888][null]
+2017-06-26 17:26:15.384 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Creating new connection [{}->http://localhost:8888]
+2017-06-26 17:26:15.485 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Released connection is reusable.
+2017-06-26 17:26:15.486 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Releasing connection [{}->http://localhost:8888][null]
+2017-06-26 17:26:15.486 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Pooling connection [{}->http://localhost:8888][null]; keep alive indefinitely
+2017-06-26 17:26:15.486 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Notifying no-one, there are no waiting threads
+2017-06-26 17:26:15.488 [Thread-6] DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient -
+				Jersey HTTP GET http://localhost:8888/eureka//apps/?; statusCode=200
+2017-06-26 17:26:15.488 [Thread-6] DEBUG c.n.d.s.t.d.RedirectingEurekaHttpClient -
+				Pinning to endpoint null
+2017-06-26 17:26:15.489 [Thread-6] DEBUG c.netflix.discovery.DiscoveryClient -
+				Got full registry with apps hashcode 
+2017-06-26 17:26:15.489 [Thread-6] DEBUG c.netflix.discovery.DiscoveryClient -
+				The total number of all instances in the client now is 0
+2017-06-26 17:26:15.570 [Thread-6] DEBUG c.n.d.s.t.d.SessionedEurekaHttpClient -
+				Ending a session and starting anew
+2017-06-26 17:26:15.570 [Thread-6] DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient -
+				Created client for url: http://localhost:8888/eureka/
+2017-06-26 17:26:15.572 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Get connection: {}->http://localhost:8888, timeout = 5000
+2017-06-26 17:26:15.572 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				[{}->http://localhost:8888] total kept alive: 1, total issued: 0, total allocated: 1 out of 200
+2017-06-26 17:26:15.572 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Getting free connection [{}->http://localhost:8888][null]
+2017-06-26 17:26:15.599 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Released connection is reusable.
+2017-06-26 17:26:15.599 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Releasing connection [{}->http://localhost:8888][null]
+2017-06-26 17:26:15.599 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Pooling connection [{}->http://localhost:8888][null]; keep alive indefinitely
+2017-06-26 17:26:15.599 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Notifying no-one, there are no waiting threads
+2017-06-26 17:26:15.599 [Thread-6] DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient -
+				Jersey HTTP DELETE http://localhost:8888/eureka//apps/CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1; statusCode=404
+2017-06-26 17:26:15.600 [Thread-6] DEBUG c.n.d.s.t.d.RedirectingEurekaHttpClient -
+				Pinning to endpoint null
+2017-06-26 17:26:15.613 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Closing connections idle longer than 0 SECONDS
+2017-06-26 17:26:15.613 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Closing connections idle longer than 0 SECONDS
+2017-06-26 17:26:15.614 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Closing connection last used @ Mon Jun 26 17:26:15 CST 2017
+2017-06-26 17:26:15.614 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Deleting connection [{}->http://localhost:8888][null]
+2017-06-26 17:26:15.615 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Closing connections idle longer than 0 SECONDS
+2017-06-26 17:26:15.615 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Closing connections idle longer than 0 SECONDS
+2017-06-26 17:29:03.828 [Thread-6] DEBUG c.n.discovery.endpoint.EndpointUtils -
+				The availability zone for the given region us-east-1 are [defaultZone]
+2017-06-26 17:29:03.848 [Thread-6] DEBUG c.n.d.s.r.aws.ConfigClusterResolver -
+				Config resolved to [AwsEndpoint{ serviceUrl='http://localhost:8888/eureka/', region='us-east-1', zone='defaultZone'}]
+2017-06-26 17:29:04.209 [Thread-6] DEBUG c.n.d.s.r.a.ZoneAffinityClusterResolver -
+				Local zone=defaultZone; resolved to: [AwsEndpoint{ serviceUrl='http://localhost:8888/eureka/', region='us-east-1', zone='defaultZone'}]
+2017-06-26 17:29:04.232 [Thread-6] DEBUG c.n.d.s.t.d.SessionedEurekaHttpClient -
+				Ending a session and starting anew
+2017-06-26 17:29:04.236 [Thread-6] DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient -
+				Created client for url: http://localhost:8888/eureka/
+2017-06-26 17:29:04.291 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Get connection: {}->http://localhost:8888, timeout = 5000
+2017-06-26 17:29:04.292 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				[{}->http://localhost:8888] total kept alive: 0, total issued: 0, total allocated: 0 out of 200
+2017-06-26 17:29:04.292 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				No free connections [{}->http://localhost:8888][null]
+2017-06-26 17:29:04.292 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Available capacity: 50 out of 50 [{}->http://localhost:8888][null]
+2017-06-26 17:29:04.292 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Creating new connection [{}->http://localhost:8888]
+2017-06-26 17:29:04.350 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Released connection is reusable.
+2017-06-26 17:29:04.350 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Releasing connection [{}->http://localhost:8888][null]
+2017-06-26 17:29:04.350 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Pooling connection [{}->http://localhost:8888][null]; keep alive indefinitely
+2017-06-26 17:29:04.350 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Notifying no-one, there are no waiting threads
+2017-06-26 17:29:04.351 [Thread-6] DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient -
+				Jersey HTTP GET http://localhost:8888/eureka//apps/?; statusCode=200
+2017-06-26 17:29:04.351 [Thread-6] DEBUG c.n.d.s.t.d.RedirectingEurekaHttpClient -
+				Pinning to endpoint null
+2017-06-26 17:29:04.352 [Thread-6] DEBUG c.netflix.discovery.DiscoveryClient -
+				Got full registry with apps hashcode 
+2017-06-26 17:29:04.352 [Thread-6] DEBUG c.netflix.discovery.DiscoveryClient -
+				The total number of all instances in the client now is 0
+2017-06-26 17:29:04.447 [Thread-6] DEBUG c.n.d.s.t.d.SessionedEurekaHttpClient -
+				Ending a session and starting anew
+2017-06-26 17:29:04.448 [Thread-6] DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient -
+				Created client for url: http://localhost:8888/eureka/
+2017-06-26 17:29:04.449 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Get connection: {}->http://localhost:8888, timeout = 5000
+2017-06-26 17:29:04.450 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				[{}->http://localhost:8888] total kept alive: 1, total issued: 0, total allocated: 1 out of 200
+2017-06-26 17:29:04.450 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Getting free connection [{}->http://localhost:8888][null]
+2017-06-26 17:29:04.458 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Released connection is reusable.
+2017-06-26 17:29:04.458 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Releasing connection [{}->http://localhost:8888][null]
+2017-06-26 17:29:04.458 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Pooling connection [{}->http://localhost:8888][null]; keep alive indefinitely
+2017-06-26 17:29:04.458 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Notifying no-one, there are no waiting threads
+2017-06-26 17:29:04.459 [Thread-6] DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient -
+				Jersey HTTP DELETE http://localhost:8888/eureka//apps/CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1; statusCode=404
+2017-06-26 17:29:04.459 [Thread-6] DEBUG c.n.d.s.t.d.RedirectingEurekaHttpClient -
+				Pinning to endpoint null
+2017-06-26 17:29:04.470 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Closing connections idle longer than 0 SECONDS
+2017-06-26 17:29:04.471 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Closing connections idle longer than 0 SECONDS
+2017-06-26 17:29:04.471 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Closing connection last used @ Mon Jun 26 17:29:04 CST 2017
+2017-06-26 17:29:04.471 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Deleting connection [{}->http://localhost:8888][null]
+2017-06-26 17:29:04.472 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Closing connections idle longer than 0 SECONDS
+2017-06-26 17:29:04.472 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Closing connections idle longer than 0 SECONDS
+2017-06-26 17:31:31.776 [Thread-6] DEBUG c.n.discovery.endpoint.EndpointUtils -
+				The availability zone for the given region us-east-1 are [defaultZone]
+2017-06-26 17:31:32.342 [Thread-6] DEBUG c.n.d.s.r.aws.ConfigClusterResolver -
+				Config resolved to [AwsEndpoint{ serviceUrl='http://localhost:8888/eureka/', region='us-east-1', zone='defaultZone'}]
+2017-06-26 17:31:32.658 [Thread-6] DEBUG c.n.d.s.r.a.ZoneAffinityClusterResolver -
+				Local zone=defaultZone; resolved to: [AwsEndpoint{ serviceUrl='http://localhost:8888/eureka/', region='us-east-1', zone='defaultZone'}]
+2017-06-26 17:31:32.677 [Thread-6] DEBUG c.n.d.s.t.d.SessionedEurekaHttpClient -
+				Ending a session and starting anew
+2017-06-26 17:31:32.681 [Thread-6] DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient -
+				Created client for url: http://localhost:8888/eureka/
+2017-06-26 17:31:32.733 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Get connection: {}->http://localhost:8888, timeout = 5000
+2017-06-26 17:31:32.734 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				[{}->http://localhost:8888] total kept alive: 0, total issued: 0, total allocated: 0 out of 200
+2017-06-26 17:31:32.734 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				No free connections [{}->http://localhost:8888][null]
+2017-06-26 17:31:32.734 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Available capacity: 50 out of 50 [{}->http://localhost:8888][null]
+2017-06-26 17:31:32.734 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Creating new connection [{}->http://localhost:8888]
+2017-06-26 17:31:32.785 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Released connection is reusable.
+2017-06-26 17:31:32.785 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Releasing connection [{}->http://localhost:8888][null]
+2017-06-26 17:31:32.785 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Pooling connection [{}->http://localhost:8888][null]; keep alive indefinitely
+2017-06-26 17:31:32.786 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Notifying no-one, there are no waiting threads
+2017-06-26 17:31:32.787 [Thread-6] DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient -
+				Jersey HTTP GET http://localhost:8888/eureka//apps/?; statusCode=200
+2017-06-26 17:31:32.787 [Thread-6] DEBUG c.n.d.s.t.d.RedirectingEurekaHttpClient -
+				Pinning to endpoint null
+2017-06-26 17:31:32.788 [Thread-6] DEBUG c.netflix.discovery.DiscoveryClient -
+				Got full registry with apps hashcode 
+2017-06-26 17:31:32.788 [Thread-6] DEBUG c.netflix.discovery.DiscoveryClient -
+				The total number of all instances in the client now is 0
+2017-06-26 17:31:32.856 [Thread-6] DEBUG c.n.d.s.t.d.SessionedEurekaHttpClient -
+				Ending a session and starting anew
+2017-06-26 17:31:32.856 [Thread-6] DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient -
+				Created client for url: http://localhost:8888/eureka/
+2017-06-26 17:31:32.858 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Get connection: {}->http://localhost:8888, timeout = 5000
+2017-06-26 17:31:32.858 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				[{}->http://localhost:8888] total kept alive: 1, total issued: 0, total allocated: 1 out of 200
+2017-06-26 17:31:32.858 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Getting free connection [{}->http://localhost:8888][null]
+2017-06-26 17:31:32.866 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Released connection is reusable.
+2017-06-26 17:31:32.867 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Releasing connection [{}->http://localhost:8888][null]
+2017-06-26 17:31:32.867 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Pooling connection [{}->http://localhost:8888][null]; keep alive indefinitely
+2017-06-26 17:31:32.867 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Notifying no-one, there are no waiting threads
+2017-06-26 17:31:32.867 [Thread-6] DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient -
+				Jersey HTTP DELETE http://localhost:8888/eureka//apps/CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1; statusCode=404
+2017-06-26 17:31:32.867 [Thread-6] DEBUG c.n.d.s.t.d.RedirectingEurekaHttpClient -
+				Pinning to endpoint null
+2017-06-26 17:31:32.879 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Closing connections idle longer than 0 SECONDS
+2017-06-26 17:31:32.879 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Closing connections idle longer than 0 SECONDS
+2017-06-26 17:31:32.880 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Closing connection last used @ Mon Jun 26 17:31:32 CST 2017
+2017-06-26 17:31:32.880 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Deleting connection [{}->http://localhost:8888][null]
+2017-06-26 17:31:32.880 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Closing connections idle longer than 0 SECONDS
+2017-06-26 17:31:32.880 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Closing connections idle longer than 0 SECONDS
+2017-06-26 17:32:26.635 [Thread-6] DEBUG c.n.discovery.endpoint.EndpointUtils -
+				The availability zone for the given region us-east-1 are [defaultZone]
+2017-06-26 17:32:26.638 [Thread-6] DEBUG c.n.d.s.r.aws.ConfigClusterResolver -
+				Config resolved to [AwsEndpoint{ serviceUrl='http://localhost:8888/eureka/', region='us-east-1', zone='defaultZone'}]
+2017-06-26 17:32:27.000 [Thread-6] DEBUG c.n.d.s.r.a.ZoneAffinityClusterResolver -
+				Local zone=defaultZone; resolved to: [AwsEndpoint{ serviceUrl='http://localhost:8888/eureka/', region='us-east-1', zone='defaultZone'}]
+2017-06-26 17:32:27.027 [Thread-6] DEBUG c.n.d.s.t.d.SessionedEurekaHttpClient -
+				Ending a session and starting anew
+2017-06-26 17:32:27.033 [Thread-6] DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient -
+				Created client for url: http://localhost:8888/eureka/
+2017-06-26 17:32:27.103 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Get connection: {}->http://localhost:8888, timeout = 5000
+2017-06-26 17:32:27.105 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				[{}->http://localhost:8888] total kept alive: 0, total issued: 0, total allocated: 0 out of 200
+2017-06-26 17:32:27.105 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				No free connections [{}->http://localhost:8888][null]
+2017-06-26 17:32:27.105 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Available capacity: 50 out of 50 [{}->http://localhost:8888][null]
+2017-06-26 17:32:27.105 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Creating new connection [{}->http://localhost:8888]
+2017-06-26 17:32:27.166 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Released connection is reusable.
+2017-06-26 17:32:27.166 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Releasing connection [{}->http://localhost:8888][null]
+2017-06-26 17:32:27.166 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Pooling connection [{}->http://localhost:8888][null]; keep alive indefinitely
+2017-06-26 17:32:27.166 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Notifying no-one, there are no waiting threads
+2017-06-26 17:32:27.167 [Thread-6] DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient -
+				Jersey HTTP GET http://localhost:8888/eureka//apps/?; statusCode=200
+2017-06-26 17:32:27.168 [Thread-6] DEBUG c.n.d.s.t.d.RedirectingEurekaHttpClient -
+				Pinning to endpoint null
+2017-06-26 17:32:27.168 [Thread-6] DEBUG c.netflix.discovery.DiscoveryClient -
+				Got full registry with apps hashcode 
+2017-06-26 17:32:27.168 [Thread-6] DEBUG c.netflix.discovery.DiscoveryClient -
+				The total number of all instances in the client now is 0
+2017-06-26 17:32:27.233 [Thread-6] DEBUG c.n.d.s.t.d.SessionedEurekaHttpClient -
+				Ending a session and starting anew
+2017-06-26 17:32:27.234 [Thread-6] DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient -
+				Created client for url: http://localhost:8888/eureka/
+2017-06-26 17:32:27.235 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Get connection: {}->http://localhost:8888, timeout = 5000
+2017-06-26 17:32:27.236 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				[{}->http://localhost:8888] total kept alive: 1, total issued: 0, total allocated: 1 out of 200
+2017-06-26 17:32:27.236 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Getting free connection [{}->http://localhost:8888][null]
+2017-06-26 17:32:27.246 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Released connection is reusable.
+2017-06-26 17:32:27.247 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Releasing connection [{}->http://localhost:8888][null]
+2017-06-26 17:32:27.247 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Pooling connection [{}->http://localhost:8888][null]; keep alive indefinitely
+2017-06-26 17:32:27.247 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Notifying no-one, there are no waiting threads
+2017-06-26 17:32:27.247 [Thread-6] DEBUG c.n.d.s.t.j.AbstractJerseyEurekaHttpClient -
+				Jersey HTTP DELETE http://localhost:8888/eureka//apps/CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1; statusCode=404
+2017-06-26 17:32:27.247 [Thread-6] DEBUG c.n.d.s.t.d.RedirectingEurekaHttpClient -
+				Pinning to endpoint null
+2017-06-26 17:32:27.259 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Closing connections idle longer than 0 SECONDS
+2017-06-26 17:32:27.259 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Closing connections idle longer than 0 SECONDS
+2017-06-26 17:32:27.260 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Closing connection last used @ Mon Jun 26 17:32:27 CST 2017
+2017-06-26 17:32:27.260 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Deleting connection [{}->http://localhost:8888][null]
+2017-06-26 17:32:27.260 [Thread-6] DEBUG c.n.d.s.MonitoredConnectionManager -
+				Closing connections idle longer than 0 SECONDS
+2017-06-26 17:32:27.261 [Thread-6] DEBUG c.n.d.shared.NamedConnectionPool -
+				Closing connections idle longer than 0 SECONDS

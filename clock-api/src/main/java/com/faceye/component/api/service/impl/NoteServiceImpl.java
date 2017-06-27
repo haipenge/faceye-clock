@@ -16,16 +16,16 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 @Service
 public class NoteServiceImpl implements NoteService {
 	@Autowired
-    RestTemplate restTemplate;
+    private RestTemplate restTemplate;
 	@Override
-	@HystrixCommand(fallbackMethod = "addServiceFallback")
+//	@HystrixCommand(fallbackMethod = "addServiceFallback")
 	public String add(String title, String text) {
 		HttpHeaders header=new HttpHeaders();
 		MediaType type=MediaType.parseMediaType("application/json;charset=UTF-8");
 		header.setContentType(type);
 		header.add("ACCEPT", MediaType.APPLICATION_JSON_UTF8_VALUE);
 		
-		String url="http://cloud-provider/note/add";
+		String url="http://clock-provider/note/add";
 		Map params=new HashMap();
 		params.put("title", title);
 		params.put("text", text);

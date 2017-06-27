@@ -1,254 +1,1158 @@
-2017-06-26 17:20:43.743 [main] INFO  c.f.t.c.p.r.NoteRepositoryTestCase -
+2017-06-27 09:28:46.619 [main] INFO  com.faceye.component.Application -
 				No active profile set, falling back to default profiles: default
-2017-06-26 17:23:18.786 [main] INFO  c.f.t.c.p.r.NoteRepositoryTestCase -
-				No active profile set, falling back to default profiles: default
-2017-06-26 17:23:27.892 [main] INFO  c.n.c.sources.URLConfigurationSource -
+2017-06-27 09:28:59.363 [main] INFO  c.n.c.sources.URLConfigurationSource -
 				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2017-06-26 17:23:27.904 [main] INFO  c.n.c.sources.URLConfigurationSource -
+2017-06-27 09:28:59.373 [main] INFO  c.n.c.sources.URLConfigurationSource -
 				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2017-06-26 17:23:28.355 [main] INFO  c.f.t.c.p.r.NoteRepositoryTestCase -
-				Started NoteRepositoryTestCase in 14.089 seconds (JVM running for 15.269)
-2017-06-26 17:23:29.006 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:28:59.915 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Initializing Eureka in region us-east-1
-2017-06-26 17:23:29.985 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+2017-06-27 09:29:00.827 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
 				Using JSON encoding codec LegacyJacksonJson
-2017-06-26 17:23:29.986 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+2017-06-27 09:29:00.827 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
 				Using JSON decoding codec LegacyJacksonJson
-2017-06-26 17:23:30.150 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+2017-06-27 09:29:01.013 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
 				Using XML encoding codec XStreamXml
-2017-06-26 17:23:30.150 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+2017-06-27 09:29:01.014 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
 				Using XML decoding codec XStreamXml
-2017-06-26 17:23:30.450 [Thread-6] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+2017-06-27 09:29:01.386 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
 				Resolving eureka endpoints via configuration
-2017-06-26 17:23:30.866 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:29:01.824 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Disable delta property : false
-2017-06-26 17:23:30.866 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:29:01.825 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Single vip registry refresh property : null
-2017-06-26 17:23:30.866 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:29:01.825 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Force full registry fetch : false
-2017-06-26 17:23:30.866 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:29:01.825 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Application is null : false
-2017-06-26 17:23:30.866 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:29:01.825 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Registered Applications size is zero : true
-2017-06-26 17:23:30.866 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:29:01.825 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Application version is -1: true
-2017-06-26 17:23:30.867 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:29:01.825 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Getting all instance registry info from the eureka server
-2017-06-26 17:23:31.397 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:29:02.037 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				The response status is 200
-2017-06-26 17:23:31.400 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:29:02.041 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Starting heartbeat executor: renew interval is: 30
-2017-06-26 17:23:31.404 [Thread-6] INFO  c.n.discovery.InstanceInfoReplicator -
+2017-06-27 09:29:02.045 [main] INFO  c.n.discovery.InstanceInfoReplicator -
 				InstanceInfoReplicator onDemand update allowed rate per min is 4
-2017-06-26 17:23:31.408 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
-				Discovery Client initialized at timestamp 1498469011407 with initial instances count: 0
-2017-06-26 17:23:31.465 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
-				Shutting down DiscoveryClient ...
-2017-06-26 17:23:31.466 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
-				Unregistering ...
-2017-06-26 17:23:31.513 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
-				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
-2017-06-26 17:23:31.760 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
-				Completed shut down of DiscoveryClient
-2017-06-26 17:25:59.928 [main] INFO  c.f.t.c.p.r.NoteRepositoryTestCase -
+2017-06-27 09:29:02.049 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498526942049 with initial instances count: 2
+2017-06-27 09:29:02.102 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Saw local status change event StatusChangeEvent [timestamp=1498526942102, current=UP, previous=STARTING]
+2017-06-27 09:29:02.107 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:8887: registering service...
+2017-06-27 09:29:02.201 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:8887 - registration status: 204
+2017-06-27 09:29:02.262 [main] INFO  com.faceye.component.Application -
+				Started Application in 21.061 seconds (JVM running for 21.976)
+2017-06-27 09:34:00.421 [main] INFO  com.faceye.component.Application -
 				No active profile set, falling back to default profiles: default
-2017-06-26 17:26:11.646 [main] INFO  c.n.c.sources.URLConfigurationSource -
+2017-06-27 09:35:03.069 [main] INFO  com.faceye.component.Application -
+				No active profile set, falling back to default profiles: default
+2017-06-27 09:35:13.539 [main] INFO  c.n.c.sources.URLConfigurationSource -
 				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2017-06-26 17:26:11.654 [main] INFO  c.n.c.sources.URLConfigurationSource -
+2017-06-27 09:35:13.549 [main] INFO  c.n.c.sources.URLConfigurationSource -
 				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2017-06-26 17:26:12.404 [main] INFO  c.f.t.c.p.r.NoteRepositoryTestCase -
-				Started NoteRepositoryTestCase in 16.881 seconds (JVM running for 18.008)
-2017-06-26 17:26:13.509 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:35:14.039 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Initializing Eureka in region us-east-1
-2017-06-26 17:26:14.422 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+2017-06-27 09:35:14.827 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
 				Using JSON encoding codec LegacyJacksonJson
-2017-06-26 17:26:14.422 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+2017-06-27 09:35:14.827 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
 				Using JSON decoding codec LegacyJacksonJson
-2017-06-26 17:26:14.616 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+2017-06-27 09:35:14.981 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
 				Using XML encoding codec XStreamXml
-2017-06-26 17:26:14.616 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+2017-06-27 09:35:14.981 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
 				Using XML decoding codec XStreamXml
-2017-06-26 17:26:14.927 [Thread-6] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+2017-06-27 09:35:15.260 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
 				Resolving eureka endpoints via configuration
-2017-06-26 17:26:15.286 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:35:15.730 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Disable delta property : false
-2017-06-26 17:26:15.286 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:35:15.730 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Single vip registry refresh property : null
-2017-06-26 17:26:15.286 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:35:15.730 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Force full registry fetch : false
-2017-06-26 17:26:15.287 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:35:15.730 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Application is null : false
-2017-06-26 17:26:15.287 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:35:15.731 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Registered Applications size is zero : true
-2017-06-26 17:26:15.287 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:35:15.731 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Application version is -1: true
-2017-06-26 17:26:15.287 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:35:15.731 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Getting all instance registry info from the eureka server
-2017-06-26 17:26:15.488 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:35:15.932 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				The response status is 200
-2017-06-26 17:26:15.491 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:35:15.936 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Starting heartbeat executor: renew interval is: 30
-2017-06-26 17:26:15.496 [Thread-6] INFO  c.n.discovery.InstanceInfoReplicator -
+2017-06-27 09:35:15.941 [main] INFO  c.n.discovery.InstanceInfoReplicator -
 				InstanceInfoReplicator onDemand update allowed rate per min is 4
-2017-06-26 17:26:15.501 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
-				Discovery Client initialized at timestamp 1498469175500 with initial instances count: 0
-2017-06-26 17:26:15.567 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
-				Shutting down DiscoveryClient ...
-2017-06-26 17:26:15.568 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
-				Unregistering ...
-2017-06-26 17:26:15.600 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
-				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
-2017-06-26 17:26:15.617 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
-				Completed shut down of DiscoveryClient
-2017-06-26 17:26:35.191 [main] INFO  c.f.t.c.p.r.NoteRepositoryTestCase -
+2017-06-27 09:35:15.949 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498527315949 with initial instances count: 2
+2017-06-27 09:35:16.004 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Saw local status change event StatusChangeEvent [timestamp=1498527316004, current=UP, previous=STARTING]
+2017-06-27 09:35:16.027 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:8887: registering service...
+2017-06-27 09:35:16.106 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:8887 - registration status: 204
+2017-06-27 09:35:16.133 [main] INFO  com.faceye.component.Application -
+				Started Application in 17.865 seconds (JVM running for 18.715)
+2017-06-27 09:36:14.313 [main] INFO  com.faceye.component.Application -
 				No active profile set, falling back to default profiles: default
-2017-06-26 17:28:51.492 [main] INFO  c.f.t.c.p.r.NoteRepositoryTestCase -
-				No active profile set, falling back to default profiles: default
-2017-06-26 17:29:00.819 [main] INFO  c.n.c.sources.URLConfigurationSource -
+2017-06-27 09:36:24.925 [main] INFO  c.n.c.sources.URLConfigurationSource -
 				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2017-06-26 17:29:00.829 [main] INFO  c.n.c.sources.URLConfigurationSource -
+2017-06-27 09:36:24.935 [main] INFO  c.n.c.sources.URLConfigurationSource -
 				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2017-06-26 17:29:01.703 [main] INFO  c.f.t.c.p.r.NoteRepositoryTestCase -
-				Started NoteRepositoryTestCase in 14.665 seconds (JVM running for 15.845)
-2017-06-26 17:29:02.563 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:36:25.506 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Initializing Eureka in region us-east-1
-2017-06-26 17:29:03.385 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+2017-06-27 09:36:26.277 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
 				Using JSON encoding codec LegacyJacksonJson
-2017-06-26 17:29:03.386 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+2017-06-27 09:36:26.278 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
 				Using JSON decoding codec LegacyJacksonJson
-2017-06-26 17:29:03.540 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+2017-06-27 09:36:26.458 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
 				Using XML encoding codec XStreamXml
-2017-06-26 17:29:03.540 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+2017-06-27 09:36:26.459 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
 				Using XML decoding codec XStreamXml
-2017-06-26 17:29:03.827 [Thread-6] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+2017-06-27 09:36:26.700 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
 				Resolving eureka endpoints via configuration
-2017-06-26 17:29:04.230 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:36:27.117 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Disable delta property : false
-2017-06-26 17:29:04.231 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:36:27.117 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Single vip registry refresh property : null
-2017-06-26 17:29:04.231 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:36:27.118 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Force full registry fetch : false
-2017-06-26 17:29:04.231 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:36:27.118 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Application is null : false
-2017-06-26 17:29:04.231 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:36:27.118 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Registered Applications size is zero : true
-2017-06-26 17:29:04.231 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:36:27.118 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Application version is -1: true
-2017-06-26 17:29:04.231 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:36:27.118 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Getting all instance registry info from the eureka server
-2017-06-26 17:29:04.352 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:36:27.335 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				The response status is 200
-2017-06-26 17:29:04.353 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:36:27.339 [main] INFO  c.netflix.discovery.DiscoveryClient -
 				Starting heartbeat executor: renew interval is: 30
-2017-06-26 17:29:04.356 [Thread-6] INFO  c.n.discovery.InstanceInfoReplicator -
+2017-06-27 09:36:27.343 [main] INFO  c.n.discovery.InstanceInfoReplicator -
 				InstanceInfoReplicator onDemand update allowed rate per min is 4
-2017-06-26 17:29:04.359 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
-				Discovery Client initialized at timestamp 1498469344359 with initial instances count: 0
-2017-06-26 17:29:04.445 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
-				Shutting down DiscoveryClient ...
-2017-06-26 17:29:04.446 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
-				Unregistering ...
-2017-06-26 17:29:04.459 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
-				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
-2017-06-26 17:29:04.475 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
-				Completed shut down of DiscoveryClient
-2017-06-26 17:31:19.191 [main] INFO  c.f.t.c.p.r.NoteRepositoryTestCase -
+2017-06-27 09:36:27.352 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498527387352 with initial instances count: 2
+2017-06-27 09:36:27.403 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Saw local status change event StatusChangeEvent [timestamp=1498527387403, current=UP, previous=STARTING]
+2017-06-27 09:36:27.413 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:8887: registering service...
+2017-06-27 09:36:27.516 [main] INFO  com.faceye.component.Application -
+				Started Application in 17.896 seconds (JVM running for 18.696)
+2017-06-27 09:36:27.543 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:8887 - registration status: 204
+2017-06-27 09:41:27.129 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+				Resolving eureka endpoints via configuration
+2017-06-27 09:42:03.430 [main] INFO  c.f.t.c.p.s.NoteServiceTestCase -
 				No active profile set, falling back to default profiles: default
-2017-06-26 17:31:28.942 [main] INFO  c.n.c.sources.URLConfigurationSource -
+2017-06-27 09:42:12.350 [main] INFO  c.n.c.sources.URLConfigurationSource -
 				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2017-06-26 17:31:28.953 [main] INFO  c.n.c.sources.URLConfigurationSource -
+2017-06-27 09:42:12.358 [main] INFO  c.n.c.sources.URLConfigurationSource -
 				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2017-06-26 17:31:29.390 [main] INFO  c.f.t.c.p.r.NoteRepositoryTestCase -
-				Started NoteRepositoryTestCase in 14.85 seconds (JVM running for 15.986)
-2017-06-26 17:31:30.491 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:42:12.718 [main] INFO  c.f.t.c.p.s.NoteServiceTestCase -
+				Started NoteServiceTestCase in 13.889 seconds (JVM running for 15.01)
+2017-06-27 09:42:14.251 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Initializing Eureka in region us-east-1
-2017-06-26 17:31:31.292 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+2017-06-27 09:42:14.922 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
 				Using JSON encoding codec LegacyJacksonJson
-2017-06-26 17:31:31.293 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+2017-06-27 09:42:14.923 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
 				Using JSON decoding codec LegacyJacksonJson
-2017-06-26 17:31:31.479 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+2017-06-27 09:42:15.077 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
 				Using XML encoding codec XStreamXml
-2017-06-26 17:31:31.480 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+2017-06-27 09:42:15.078 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
 				Using XML decoding codec XStreamXml
-2017-06-26 17:31:31.774 [Thread-6] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+2017-06-27 09:42:15.397 [Thread-6] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
 				Resolving eureka endpoints via configuration
-2017-06-26 17:31:32.675 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:42:15.796 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Disable delta property : false
-2017-06-26 17:31:32.675 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:42:15.796 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Single vip registry refresh property : null
-2017-06-26 17:31:32.675 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:42:15.796 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Force full registry fetch : false
-2017-06-26 17:31:32.675 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:42:15.796 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Application is null : false
-2017-06-26 17:31:32.676 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:42:15.796 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Registered Applications size is zero : true
-2017-06-26 17:31:32.676 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:42:15.796 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Application version is -1: true
-2017-06-26 17:31:32.676 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:42:15.796 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Getting all instance registry info from the eureka server
-2017-06-26 17:31:32.787 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:42:16.007 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				The response status is 200
-2017-06-26 17:31:32.789 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:42:16.011 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Starting heartbeat executor: renew interval is: 30
-2017-06-26 17:31:32.795 [Thread-6] INFO  c.n.discovery.InstanceInfoReplicator -
+2017-06-27 09:42:16.015 [Thread-6] INFO  c.n.discovery.InstanceInfoReplicator -
 				InstanceInfoReplicator onDemand update allowed rate per min is 4
-2017-06-26 17:31:32.799 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
-				Discovery Client initialized at timestamp 1498469492799 with initial instances count: 0
-2017-06-26 17:31:32.853 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:42:16.018 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498527736018 with initial instances count: 2
+2017-06-27 09:42:16.067 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Shutting down DiscoveryClient ...
-2017-06-26 17:31:32.854 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:42:16.068 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Unregistering ...
-2017-06-26 17:31:32.867 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:42:16.104 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
-2017-06-26 17:31:32.885 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:42:16.121 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Completed shut down of DiscoveryClient
-2017-06-26 17:32:14.289 [main] INFO  c.f.t.c.p.r.NoteRepositoryTestCase -
+2017-06-27 09:42:54.066 [main] INFO  c.f.t.c.p.s.NoteServiceTestCase -
 				No active profile set, falling back to default profiles: default
-2017-06-26 17:32:23.950 [main] INFO  c.n.c.sources.URLConfigurationSource -
+2017-06-27 09:43:04.071 [main] INFO  c.n.c.sources.URLConfigurationSource -
 				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2017-06-26 17:32:23.958 [main] INFO  c.n.c.sources.URLConfigurationSource -
+2017-06-27 09:43:04.082 [main] INFO  c.n.c.sources.URLConfigurationSource -
 				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2017-06-26 17:32:24.352 [main] INFO  c.f.t.c.p.r.NoteRepositoryTestCase -
-				Started NoteRepositoryTestCase in 14.601 seconds (JVM running for 15.817)
-2017-06-26 17:32:25.300 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:43:04.460 [main] INFO  c.f.t.c.p.s.NoteServiceTestCase -
+				Started NoteServiceTestCase in 15.762 seconds (JVM running for 16.9)
+2017-06-27 09:43:05.595 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Initializing Eureka in region us-east-1
-2017-06-26 17:32:26.187 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+2017-06-27 09:43:06.492 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
 				Using JSON encoding codec LegacyJacksonJson
-2017-06-26 17:32:26.188 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+2017-06-27 09:43:06.493 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
 				Using JSON decoding codec LegacyJacksonJson
-2017-06-26 17:32:26.334 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+2017-06-27 09:43:06.674 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
 				Using XML encoding codec XStreamXml
-2017-06-26 17:32:26.334 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+2017-06-27 09:43:06.675 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
 				Using XML decoding codec XStreamXml
-2017-06-26 17:32:26.633 [Thread-6] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+2017-06-27 09:43:06.980 [Thread-6] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
 				Resolving eureka endpoints via configuration
-2017-06-26 17:32:27.025 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:43:07.396 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Disable delta property : false
-2017-06-26 17:32:27.026 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:43:07.396 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Single vip registry refresh property : null
-2017-06-26 17:32:27.026 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:43:07.396 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Force full registry fetch : false
-2017-06-26 17:32:27.026 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:43:07.396 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Application is null : false
-2017-06-26 17:32:27.026 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:43:07.396 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Registered Applications size is zero : true
-2017-06-26 17:32:27.026 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:43:07.397 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Application version is -1: true
-2017-06-26 17:32:27.026 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:43:07.397 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Getting all instance registry info from the eureka server
-2017-06-26 17:32:27.168 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:43:07.600 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				The response status is 200
-2017-06-26 17:32:27.170 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:43:07.603 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Starting heartbeat executor: renew interval is: 30
-2017-06-26 17:32:27.173 [Thread-6] INFO  c.n.discovery.InstanceInfoReplicator -
+2017-06-27 09:43:07.607 [Thread-6] INFO  c.n.discovery.InstanceInfoReplicator -
 				InstanceInfoReplicator onDemand update allowed rate per min is 4
-2017-06-26 17:32:27.177 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
-				Discovery Client initialized at timestamp 1498469547177 with initial instances count: 0
-2017-06-26 17:32:27.232 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:43:07.612 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498527787612 with initial instances count: 2
+2017-06-27 09:43:07.672 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Shutting down DiscoveryClient ...
-2017-06-26 17:32:27.232 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:43:07.673 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Unregistering ...
-2017-06-26 17:32:27.248 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:43:07.743 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
-2017-06-26 17:32:27.262 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+2017-06-27 09:43:07.762 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
 				Completed shut down of DiscoveryClient
+2017-06-27 09:43:38.242 [main] INFO  c.f.t.c.p.s.NoteServiceTestCase -
+				No active profile set, falling back to default profiles: default
+2017-06-27 09:43:47.704 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 09:43:47.713 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 09:43:48.096 [main] INFO  c.f.t.c.p.s.NoteServiceTestCase -
+				Started NoteServiceTestCase in 14.47 seconds (JVM running for 15.593)
+2017-06-27 09:43:49.168 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Initializing Eureka in region us-east-1
+2017-06-27 09:43:49.898 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON encoding codec LegacyJacksonJson
+2017-06-27 09:43:49.898 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON decoding codec LegacyJacksonJson
+2017-06-27 09:43:50.067 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML encoding codec XStreamXml
+2017-06-27 09:43:50.067 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML decoding codec XStreamXml
+2017-06-27 09:43:50.358 [Thread-6] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+				Resolving eureka endpoints via configuration
+2017-06-27 09:43:50.831 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Disable delta property : false
+2017-06-27 09:43:50.832 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Single vip registry refresh property : null
+2017-06-27 09:43:50.832 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Force full registry fetch : false
+2017-06-27 09:43:50.832 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application is null : false
+2017-06-27 09:43:50.832 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Registered Applications size is zero : true
+2017-06-27 09:43:50.832 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application version is -1: true
+2017-06-27 09:43:50.833 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Getting all instance registry info from the eureka server
+2017-06-27 09:43:51.015 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				The response status is 200
+2017-06-27 09:43:51.022 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Starting heartbeat executor: renew interval is: 30
+2017-06-27 09:43:51.037 [Thread-6] INFO  c.n.discovery.InstanceInfoReplicator -
+				InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-27 09:43:51.043 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498527831043 with initial instances count: 2
+2017-06-27 09:43:51.095 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Shutting down DiscoveryClient ...
+2017-06-27 09:43:51.097 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Unregistering ...
+2017-06-27 09:43:51.498 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
+2017-06-27 09:43:51.512 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Completed shut down of DiscoveryClient
+2017-06-27 09:44:30.446 [main] INFO  c.f.t.c.p.s.NoteServiceTestCase -
+				No active profile set, falling back to default profiles: default
+2017-06-27 09:44:40.521 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 09:44:40.532 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 09:44:40.978 [main] INFO  c.f.t.c.p.s.NoteServiceTestCase -
+				Started NoteServiceTestCase in 16.981 seconds (JVM running for 18.311)
+2017-06-27 09:44:42.314 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Initializing Eureka in region us-east-1
+2017-06-27 09:44:43.050 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON encoding codec LegacyJacksonJson
+2017-06-27 09:44:43.051 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON decoding codec LegacyJacksonJson
+2017-06-27 09:44:43.227 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML encoding codec XStreamXml
+2017-06-27 09:44:43.228 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML decoding codec XStreamXml
+2017-06-27 09:44:43.614 [Thread-6] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+				Resolving eureka endpoints via configuration
+2017-06-27 09:44:44.073 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Disable delta property : false
+2017-06-27 09:44:44.074 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Single vip registry refresh property : null
+2017-06-27 09:44:44.074 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Force full registry fetch : false
+2017-06-27 09:44:44.074 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application is null : false
+2017-06-27 09:44:44.074 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Registered Applications size is zero : true
+2017-06-27 09:44:44.074 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application version is -1: true
+2017-06-27 09:44:44.075 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Getting all instance registry info from the eureka server
+2017-06-27 09:44:44.347 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				The response status is 200
+2017-06-27 09:44:44.349 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Starting heartbeat executor: renew interval is: 30
+2017-06-27 09:44:44.354 [Thread-6] INFO  c.n.discovery.InstanceInfoReplicator -
+				InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-27 09:44:44.358 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498527884358 with initial instances count: 2
+2017-06-27 09:44:44.409 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Shutting down DiscoveryClient ...
+2017-06-27 09:44:44.409 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Unregistering ...
+2017-06-27 09:44:44.420 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
+2017-06-27 09:44:44.438 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Completed shut down of DiscoveryClient
+2017-06-27 09:47:23.374 [main] INFO  c.f.t.c.p.s.NoteServiceTestCase -
+				No active profile set, falling back to default profiles: default
+2017-06-27 09:47:33.512 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 09:47:33.526 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 09:47:34.284 [main] INFO  c.f.t.c.p.s.NoteServiceTestCase -
+				Started NoteServiceTestCase in 15.916 seconds (JVM running for 17.052)
+2017-06-27 09:47:35.034 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Initializing Eureka in region us-east-1
+2017-06-27 09:47:35.886 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON encoding codec LegacyJacksonJson
+2017-06-27 09:47:35.886 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON decoding codec LegacyJacksonJson
+2017-06-27 09:47:36.041 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML encoding codec XStreamXml
+2017-06-27 09:47:36.042 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML decoding codec XStreamXml
+2017-06-27 09:47:36.312 [Thread-6] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+				Resolving eureka endpoints via configuration
+2017-06-27 09:47:36.769 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Disable delta property : false
+2017-06-27 09:47:36.769 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Single vip registry refresh property : null
+2017-06-27 09:47:36.769 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Force full registry fetch : false
+2017-06-27 09:47:36.769 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application is null : false
+2017-06-27 09:47:36.769 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Registered Applications size is zero : true
+2017-06-27 09:47:36.770 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application version is -1: true
+2017-06-27 09:47:36.770 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Getting all instance registry info from the eureka server
+2017-06-27 09:47:37.028 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				The response status is 200
+2017-06-27 09:47:37.031 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Starting heartbeat executor: renew interval is: 30
+2017-06-27 09:47:37.036 [Thread-6] INFO  c.n.discovery.InstanceInfoReplicator -
+				InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-27 09:47:37.042 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498528057041 with initial instances count: 2
+2017-06-27 09:47:37.097 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Shutting down DiscoveryClient ...
+2017-06-27 09:47:37.098 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Unregistering ...
+2017-06-27 09:47:37.110 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
+2017-06-27 09:47:37.126 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Completed shut down of DiscoveryClient
+2017-06-27 10:13:04.593 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				No active profile set, falling back to default profiles: default
+2017-06-27 10:13:13.832 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 10:13:13.842 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 10:13:14.276 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				Started NoteControllerTestCase in 14.669 seconds (JVM running for 15.943)
+2017-06-27 10:13:14.581 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Initializing Eureka in region us-east-1
+2017-06-27 10:13:15.413 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON encoding codec LegacyJacksonJson
+2017-06-27 10:13:15.413 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON decoding codec LegacyJacksonJson
+2017-06-27 10:13:15.681 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML encoding codec XStreamXml
+2017-06-27 10:13:15.682 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML decoding codec XStreamXml
+2017-06-27 10:13:16.024 [Thread-6] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+				Resolving eureka endpoints via configuration
+2017-06-27 10:13:16.366 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Disable delta property : false
+2017-06-27 10:13:16.366 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Single vip registry refresh property : null
+2017-06-27 10:13:16.366 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Force full registry fetch : false
+2017-06-27 10:13:16.366 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application is null : false
+2017-06-27 10:13:16.367 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Registered Applications size is zero : true
+2017-06-27 10:13:16.367 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application version is -1: true
+2017-06-27 10:13:16.367 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Getting all instance registry info from the eureka server
+2017-06-27 10:13:16.566 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				The response status is 200
+2017-06-27 10:13:16.569 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Starting heartbeat executor: renew interval is: 30
+2017-06-27 10:13:16.574 [Thread-6] INFO  c.n.discovery.InstanceInfoReplicator -
+				InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-27 10:13:16.578 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498529596578 with initial instances count: 2
+2017-06-27 10:13:16.636 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Shutting down DiscoveryClient ...
+2017-06-27 10:13:16.637 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Unregistering ...
+2017-06-27 10:13:16.706 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
+2017-06-27 10:13:16.721 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Completed shut down of DiscoveryClient
+2017-06-27 10:14:28.249 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				No active profile set, falling back to default profiles: default
+2017-06-27 10:14:37.420 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 10:14:37.433 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 10:14:37.868 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				Started NoteControllerTestCase in 14.122 seconds (JVM running for 15.326)
+2017-06-27 10:14:38.501 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Initializing Eureka in region us-east-1
+2017-06-27 10:14:39.325 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON encoding codec LegacyJacksonJson
+2017-06-27 10:14:39.325 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON decoding codec LegacyJacksonJson
+2017-06-27 10:14:39.480 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML encoding codec XStreamXml
+2017-06-27 10:14:39.480 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML decoding codec XStreamXml
+2017-06-27 10:14:39.764 [Thread-6] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+				Resolving eureka endpoints via configuration
+2017-06-27 10:14:40.100 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Disable delta property : false
+2017-06-27 10:14:40.100 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Single vip registry refresh property : null
+2017-06-27 10:14:40.101 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Force full registry fetch : false
+2017-06-27 10:14:40.101 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application is null : false
+2017-06-27 10:14:40.101 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Registered Applications size is zero : true
+2017-06-27 10:14:40.101 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application version is -1: true
+2017-06-27 10:14:40.101 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Getting all instance registry info from the eureka server
+2017-06-27 10:14:40.260 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				The response status is 200
+2017-06-27 10:14:40.262 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Starting heartbeat executor: renew interval is: 30
+2017-06-27 10:14:40.266 [Thread-6] INFO  c.n.discovery.InstanceInfoReplicator -
+				InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-27 10:14:40.269 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498529680269 with initial instances count: 2
+2017-06-27 10:14:40.324 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Shutting down DiscoveryClient ...
+2017-06-27 10:14:40.326 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Unregistering ...
+2017-06-27 10:14:40.343 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
+2017-06-27 10:14:40.358 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Completed shut down of DiscoveryClient
+2017-06-27 10:15:49.917 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				No active profile set, falling back to default profiles: default
+2017-06-27 10:16:00.549 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 10:16:00.561 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 10:16:01.394 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				Started NoteControllerTestCase in 15.914 seconds (JVM running for 17.176)
+2017-06-27 10:16:02.045 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Initializing Eureka in region us-east-1
+2017-06-27 10:16:02.874 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON encoding codec LegacyJacksonJson
+2017-06-27 10:16:02.875 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON decoding codec LegacyJacksonJson
+2017-06-27 10:16:03.119 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML encoding codec XStreamXml
+2017-06-27 10:16:03.120 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML decoding codec XStreamXml
+2017-06-27 10:16:03.458 [Thread-6] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+				Resolving eureka endpoints via configuration
+2017-06-27 10:16:03.891 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Disable delta property : false
+2017-06-27 10:16:03.891 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Single vip registry refresh property : null
+2017-06-27 10:16:03.891 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Force full registry fetch : false
+2017-06-27 10:16:03.891 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application is null : false
+2017-06-27 10:16:03.891 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Registered Applications size is zero : true
+2017-06-27 10:16:03.891 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application version is -1: true
+2017-06-27 10:16:03.892 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Getting all instance registry info from the eureka server
+2017-06-27 10:16:04.078 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				The response status is 200
+2017-06-27 10:16:04.080 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Starting heartbeat executor: renew interval is: 30
+2017-06-27 10:16:04.083 [Thread-6] INFO  c.n.discovery.InstanceInfoReplicator -
+				InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-27 10:16:04.086 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498529764086 with initial instances count: 2
+2017-06-27 10:16:04.131 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Shutting down DiscoveryClient ...
+2017-06-27 10:16:04.135 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Unregistering ...
+2017-06-27 10:16:04.175 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
+2017-06-27 10:16:04.190 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Completed shut down of DiscoveryClient
+2017-06-27 10:16:52.507 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				No active profile set, falling back to default profiles: default
+2017-06-27 10:17:02.128 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 10:17:02.140 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 10:17:02.610 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				Started NoteControllerTestCase in 15.2 seconds (JVM running for 16.413)
+2017-06-27 10:17:03.335 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Initializing Eureka in region us-east-1
+2017-06-27 10:17:04.228 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON encoding codec LegacyJacksonJson
+2017-06-27 10:17:04.228 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON decoding codec LegacyJacksonJson
+2017-06-27 10:17:04.410 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML encoding codec XStreamXml
+2017-06-27 10:17:04.410 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML decoding codec XStreamXml
+2017-06-27 10:17:04.741 [Thread-6] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+				Resolving eureka endpoints via configuration
+2017-06-27 10:17:05.161 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Disable delta property : false
+2017-06-27 10:17:05.161 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Single vip registry refresh property : null
+2017-06-27 10:17:05.161 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Force full registry fetch : false
+2017-06-27 10:17:05.161 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application is null : false
+2017-06-27 10:17:05.161 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Registered Applications size is zero : true
+2017-06-27 10:17:05.162 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application version is -1: true
+2017-06-27 10:17:05.162 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Getting all instance registry info from the eureka server
+2017-06-27 10:17:05.343 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				The response status is 200
+2017-06-27 10:17:05.346 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Starting heartbeat executor: renew interval is: 30
+2017-06-27 10:17:05.351 [Thread-6] INFO  c.n.discovery.InstanceInfoReplicator -
+				InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-27 10:17:05.356 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498529825355 with initial instances count: 2
+2017-06-27 10:17:05.409 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Shutting down DiscoveryClient ...
+2017-06-27 10:17:05.413 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Unregistering ...
+2017-06-27 10:17:05.448 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
+2017-06-27 10:17:05.462 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Completed shut down of DiscoveryClient
+2017-06-27 10:20:22.754 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				No active profile set, falling back to default profiles: default
+2017-06-27 10:20:31.820 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 10:20:31.832 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 10:20:32.222 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				Started NoteControllerTestCase in 14.065 seconds (JVM running for 15.166)
+2017-06-27 10:20:32.553 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Initializing Eureka in region us-east-1
+2017-06-27 10:20:33.362 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON encoding codec LegacyJacksonJson
+2017-06-27 10:20:33.362 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON decoding codec LegacyJacksonJson
+2017-06-27 10:20:33.576 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML encoding codec XStreamXml
+2017-06-27 10:20:33.577 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML decoding codec XStreamXml
+2017-06-27 10:20:33.954 [Thread-6] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+				Resolving eureka endpoints via configuration
+2017-06-27 10:20:34.326 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Disable delta property : false
+2017-06-27 10:20:34.327 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Single vip registry refresh property : null
+2017-06-27 10:20:34.327 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Force full registry fetch : false
+2017-06-27 10:20:34.327 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application is null : false
+2017-06-27 10:20:34.327 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Registered Applications size is zero : true
+2017-06-27 10:20:34.327 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application version is -1: true
+2017-06-27 10:20:34.327 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Getting all instance registry info from the eureka server
+2017-06-27 10:20:34.497 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				The response status is 200
+2017-06-27 10:20:34.500 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Starting heartbeat executor: renew interval is: 30
+2017-06-27 10:20:34.503 [Thread-6] INFO  c.n.discovery.InstanceInfoReplicator -
+				InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-27 10:20:34.506 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498530034506 with initial instances count: 2
+2017-06-27 10:20:34.563 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Shutting down DiscoveryClient ...
+2017-06-27 10:20:34.564 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Unregistering ...
+2017-06-27 10:20:34.660 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
+2017-06-27 10:20:34.671 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Completed shut down of DiscoveryClient
+2017-06-27 10:25:02.751 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				No active profile set, falling back to default profiles: default
+2017-06-27 10:25:12.765 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 10:25:12.776 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 10:25:13.186 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				Started NoteControllerTestCase in 15.361 seconds (JVM running for 16.481)
+2017-06-27 10:25:13.745 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Initializing Eureka in region us-east-1
+2017-06-27 10:25:14.609 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON encoding codec LegacyJacksonJson
+2017-06-27 10:25:14.610 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON decoding codec LegacyJacksonJson
+2017-06-27 10:25:14.788 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML encoding codec XStreamXml
+2017-06-27 10:25:14.789 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML decoding codec XStreamXml
+2017-06-27 10:25:15.048 [Thread-6] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+				Resolving eureka endpoints via configuration
+2017-06-27 10:25:15.407 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Disable delta property : false
+2017-06-27 10:25:15.407 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Single vip registry refresh property : null
+2017-06-27 10:25:15.407 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Force full registry fetch : false
+2017-06-27 10:25:15.407 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application is null : false
+2017-06-27 10:25:15.407 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Registered Applications size is zero : true
+2017-06-27 10:25:15.408 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application version is -1: true
+2017-06-27 10:25:15.408 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Getting all instance registry info from the eureka server
+2017-06-27 10:25:15.599 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				The response status is 200
+2017-06-27 10:25:15.603 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Starting heartbeat executor: renew interval is: 30
+2017-06-27 10:25:15.606 [Thread-6] INFO  c.n.discovery.InstanceInfoReplicator -
+				InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-27 10:25:15.609 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498530315609 with initial instances count: 2
+2017-06-27 10:25:15.667 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Shutting down DiscoveryClient ...
+2017-06-27 10:25:15.668 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Unregistering ...
+2017-06-27 10:25:15.685 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
+2017-06-27 10:25:15.701 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Completed shut down of DiscoveryClient
+2017-06-27 10:40:55.433 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				No active profile set, falling back to default profiles: default
+2017-06-27 10:41:06.533 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 10:41:06.546 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 10:41:06.954 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				Started NoteControllerTestCase in 17.466 seconds (JVM running for 18.737)
+2017-06-27 10:41:07.659 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Initializing Eureka in region us-east-1
+2017-06-27 10:41:08.456 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON encoding codec LegacyJacksonJson
+2017-06-27 10:41:08.457 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON decoding codec LegacyJacksonJson
+2017-06-27 10:41:08.668 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML encoding codec XStreamXml
+2017-06-27 10:41:08.669 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML decoding codec XStreamXml
+2017-06-27 10:41:08.954 [Thread-6] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+				Resolving eureka endpoints via configuration
+2017-06-27 10:41:09.401 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Disable delta property : false
+2017-06-27 10:41:09.401 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Single vip registry refresh property : null
+2017-06-27 10:41:09.401 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Force full registry fetch : false
+2017-06-27 10:41:09.402 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application is null : false
+2017-06-27 10:41:09.402 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Registered Applications size is zero : true
+2017-06-27 10:41:09.402 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application version is -1: true
+2017-06-27 10:41:09.402 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Getting all instance registry info from the eureka server
+2017-06-27 10:41:09.602 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				The response status is 200
+2017-06-27 10:41:09.605 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Starting heartbeat executor: renew interval is: 30
+2017-06-27 10:41:09.610 [Thread-6] INFO  c.n.discovery.InstanceInfoReplicator -
+				InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-27 10:41:09.615 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498531269614 with initial instances count: 2
+2017-06-27 10:41:09.675 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Shutting down DiscoveryClient ...
+2017-06-27 10:41:09.676 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Unregistering ...
+2017-06-27 10:41:09.686 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
+2017-06-27 10:41:09.705 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Completed shut down of DiscoveryClient
+2017-06-27 10:45:43.699 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				No active profile set, falling back to default profiles: default
+2017-06-27 10:45:52.540 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 10:45:52.550 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 10:45:52.917 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				Started NoteControllerTestCase in 13.663 seconds (JVM running for 14.756)
+2017-06-27 10:45:53.742 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Initializing Eureka in region us-east-1
+2017-06-27 10:45:54.527 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON encoding codec LegacyJacksonJson
+2017-06-27 10:45:54.528 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON decoding codec LegacyJacksonJson
+2017-06-27 10:45:54.688 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML encoding codec XStreamXml
+2017-06-27 10:45:54.689 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML decoding codec XStreamXml
+2017-06-27 10:45:54.989 [Thread-6] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+				Resolving eureka endpoints via configuration
+2017-06-27 10:45:55.325 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Disable delta property : false
+2017-06-27 10:45:55.326 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Single vip registry refresh property : null
+2017-06-27 10:45:55.326 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Force full registry fetch : false
+2017-06-27 10:45:55.326 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application is null : false
+2017-06-27 10:45:55.326 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Registered Applications size is zero : true
+2017-06-27 10:45:55.326 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application version is -1: true
+2017-06-27 10:45:55.326 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Getting all instance registry info from the eureka server
+2017-06-27 10:45:55.487 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				The response status is 200
+2017-06-27 10:45:55.489 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Starting heartbeat executor: renew interval is: 30
+2017-06-27 10:45:55.491 [Thread-6] INFO  c.n.discovery.InstanceInfoReplicator -
+				InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-27 10:45:55.495 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498531555494 with initial instances count: 2
+2017-06-27 10:45:55.584 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Shutting down DiscoveryClient ...
+2017-06-27 10:45:55.585 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Unregistering ...
+2017-06-27 10:45:55.646 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
+2017-06-27 10:45:55.664 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Completed shut down of DiscoveryClient
+2017-06-27 10:53:56.801 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				No active profile set, falling back to default profiles: default
+2017-06-27 10:54:07.330 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 10:54:07.342 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 10:54:07.856 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				Started NoteControllerTestCase in 15.816 seconds (JVM running for 16.932)
+2017-06-27 10:54:08.302 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Initializing Eureka in region us-east-1
+2017-06-27 10:54:09.217 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON encoding codec LegacyJacksonJson
+2017-06-27 10:54:09.217 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON decoding codec LegacyJacksonJson
+2017-06-27 10:54:09.438 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML encoding codec XStreamXml
+2017-06-27 10:54:09.439 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML decoding codec XStreamXml
+2017-06-27 10:54:09.756 [Thread-6] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+				Resolving eureka endpoints via configuration
+2017-06-27 10:54:10.202 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Disable delta property : false
+2017-06-27 10:54:10.202 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Single vip registry refresh property : null
+2017-06-27 10:54:10.202 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Force full registry fetch : false
+2017-06-27 10:54:10.203 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application is null : false
+2017-06-27 10:54:10.203 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Registered Applications size is zero : true
+2017-06-27 10:54:10.203 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application version is -1: true
+2017-06-27 10:54:10.203 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Getting all instance registry info from the eureka server
+2017-06-27 10:54:10.375 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				The response status is 200
+2017-06-27 10:54:10.377 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Starting heartbeat executor: renew interval is: 30
+2017-06-27 10:54:10.380 [Thread-6] INFO  c.n.discovery.InstanceInfoReplicator -
+				InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-27 10:54:10.383 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498532050382 with initial instances count: 2
+2017-06-27 10:54:10.478 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Shutting down DiscoveryClient ...
+2017-06-27 10:54:10.504 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Unregistering ...
+2017-06-27 10:54:10.530 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
+2017-06-27 10:54:10.547 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Completed shut down of DiscoveryClient
+2017-06-27 10:55:04.093 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				No active profile set, falling back to default profiles: default
+2017-06-27 10:55:13.050 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 10:55:13.058 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 10:55:13.440 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				Started NoteControllerTestCase in 13.924 seconds (JVM running for 15.028)
+2017-06-27 10:55:13.873 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Initializing Eureka in region us-east-1
+2017-06-27 10:55:14.723 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON encoding codec LegacyJacksonJson
+2017-06-27 10:55:14.723 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON decoding codec LegacyJacksonJson
+2017-06-27 10:55:14.881 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML encoding codec XStreamXml
+2017-06-27 10:55:14.881 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML decoding codec XStreamXml
+2017-06-27 10:55:15.190 [Thread-6] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+				Resolving eureka endpoints via configuration
+2017-06-27 10:55:15.619 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Disable delta property : false
+2017-06-27 10:55:15.620 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Single vip registry refresh property : null
+2017-06-27 10:55:15.620 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Force full registry fetch : false
+2017-06-27 10:55:15.620 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application is null : false
+2017-06-27 10:55:15.620 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Registered Applications size is zero : true
+2017-06-27 10:55:15.620 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application version is -1: true
+2017-06-27 10:55:15.620 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Getting all instance registry info from the eureka server
+2017-06-27 10:55:15.871 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				The response status is 200
+2017-06-27 10:55:15.875 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Starting heartbeat executor: renew interval is: 30
+2017-06-27 10:55:15.880 [Thread-6] INFO  c.n.discovery.InstanceInfoReplicator -
+				InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-27 10:55:15.885 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498532115885 with initial instances count: 2
+2017-06-27 10:55:15.938 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Shutting down DiscoveryClient ...
+2017-06-27 10:55:15.939 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Unregistering ...
+2017-06-27 10:55:15.994 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
+2017-06-27 10:55:16.019 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Completed shut down of DiscoveryClient
+2017-06-27 10:57:10.383 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				No active profile set, falling back to default profiles: default
+2017-06-27 10:57:19.045 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 10:57:19.055 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 10:57:19.500 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				Started NoteControllerTestCase in 13.853 seconds (JVM running for 15.261)
+2017-06-27 10:57:20.480 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Initializing Eureka in region us-east-1
+2017-06-27 10:57:21.265 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON encoding codec LegacyJacksonJson
+2017-06-27 10:57:21.266 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON decoding codec LegacyJacksonJson
+2017-06-27 10:57:21.426 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML encoding codec XStreamXml
+2017-06-27 10:57:21.427 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML decoding codec XStreamXml
+2017-06-27 10:57:21.757 [Thread-6] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+				Resolving eureka endpoints via configuration
+2017-06-27 10:57:22.176 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Disable delta property : false
+2017-06-27 10:57:22.177 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Single vip registry refresh property : null
+2017-06-27 10:57:22.177 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Force full registry fetch : false
+2017-06-27 10:57:22.177 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application is null : false
+2017-06-27 10:57:22.177 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Registered Applications size is zero : true
+2017-06-27 10:57:22.177 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application version is -1: true
+2017-06-27 10:57:22.177 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Getting all instance registry info from the eureka server
+2017-06-27 10:57:22.790 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				The response status is 200
+2017-06-27 10:57:22.793 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Starting heartbeat executor: renew interval is: 30
+2017-06-27 10:57:22.798 [Thread-6] INFO  c.n.discovery.InstanceInfoReplicator -
+				InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-27 10:57:22.801 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498532242801 with initial instances count: 2
+2017-06-27 10:57:22.848 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Shutting down DiscoveryClient ...
+2017-06-27 10:57:22.849 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Unregistering ...
+2017-06-27 10:57:22.864 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
+2017-06-27 10:57:22.878 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Completed shut down of DiscoveryClient
+2017-06-27 11:01:39.625 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				No active profile set, falling back to default profiles: default
+2017-06-27 11:01:48.337 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 11:01:48.344 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 11:01:48.963 [main] INFO  c.f.t.c.p.c.NoteControllerTestCase -
+				Started NoteControllerTestCase in 14.431 seconds (JVM running for 15.634)
+2017-06-27 11:01:51.845 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Initializing Eureka in region us-east-1
+2017-06-27 11:01:52.634 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON encoding codec LegacyJacksonJson
+2017-06-27 11:01:52.635 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON decoding codec LegacyJacksonJson
+2017-06-27 11:01:52.838 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML encoding codec XStreamXml
+2017-06-27 11:01:52.839 [Thread-6] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML decoding codec XStreamXml
+2017-06-27 11:01:53.132 [Thread-6] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+				Resolving eureka endpoints via configuration
+2017-06-27 11:01:53.577 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Disable delta property : false
+2017-06-27 11:01:53.577 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Single vip registry refresh property : null
+2017-06-27 11:01:53.577 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Force full registry fetch : false
+2017-06-27 11:01:53.578 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application is null : false
+2017-06-27 11:01:53.578 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Registered Applications size is zero : true
+2017-06-27 11:01:53.578 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Application version is -1: true
+2017-06-27 11:01:53.578 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Getting all instance registry info from the eureka server
+2017-06-27 11:01:54.229 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				The response status is 200
+2017-06-27 11:01:54.237 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Starting heartbeat executor: renew interval is: 30
+2017-06-27 11:01:54.240 [Thread-6] INFO  c.n.discovery.InstanceInfoReplicator -
+				InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-27 11:01:54.244 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498532514243 with initial instances count: 2
+2017-06-27 11:01:54.321 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Shutting down DiscoveryClient ...
+2017-06-27 11:01:54.327 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Unregistering ...
+2017-06-27 11:01:54.387 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:-1 - deregister  status: 404
+2017-06-27 11:01:54.403 [Thread-6] INFO  c.netflix.discovery.DiscoveryClient -
+				Completed shut down of DiscoveryClient
+2017-06-27 14:38:53.120 [main] INFO  com.faceye.component.Application -
+				No active profile set, falling back to default profiles: default
+2017-06-27 14:39:03.160 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 14:39:03.172 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 14:39:04.060 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Initializing Eureka in region us-east-1
+2017-06-27 14:39:04.930 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON encoding codec LegacyJacksonJson
+2017-06-27 14:39:04.931 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON decoding codec LegacyJacksonJson
+2017-06-27 14:39:05.130 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML encoding codec XStreamXml
+2017-06-27 14:39:05.131 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML decoding codec XStreamXml
+2017-06-27 14:39:05.447 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+				Resolving eureka endpoints via configuration
+2017-06-27 14:39:06.005 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Disable delta property : false
+2017-06-27 14:39:06.005 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Single vip registry refresh property : null
+2017-06-27 14:39:06.005 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Force full registry fetch : false
+2017-06-27 14:39:06.005 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Application is null : false
+2017-06-27 14:39:06.006 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Registered Applications size is zero : true
+2017-06-27 14:39:06.006 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Application version is -1: true
+2017-06-27 14:39:06.006 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Getting all instance registry info from the eureka server
+2017-06-27 14:39:06.132 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				The response status is 200
+2017-06-27 14:39:06.134 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Starting heartbeat executor: renew interval is: 30
+2017-06-27 14:39:06.137 [main] INFO  c.n.discovery.InstanceInfoReplicator -
+				InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-27 14:39:06.140 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498545546140 with initial instances count: 0
+2017-06-27 14:39:06.203 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Saw local status change event StatusChangeEvent [timestamp=1498545546203, current=UP, previous=STARTING]
+2017-06-27 14:39:06.230 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:8887: registering service...
+2017-06-27 14:39:06.405 [main] INFO  com.faceye.component.Application -
+				Started Application in 17.906 seconds (JVM running for 18.761)
+2017-06-27 14:39:06.568 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:8887 - registration status: 204
+2017-06-27 14:39:36.136 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -
+				Disable delta property : false
+2017-06-27 14:39:36.148 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -
+				Single vip registry refresh property : null
+2017-06-27 14:39:36.149 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -
+				Force full registry fetch : false
+2017-06-27 14:39:36.149 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -
+				Application is null : false
+2017-06-27 14:39:36.149 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -
+				Registered Applications size is zero : true
+2017-06-27 14:39:36.149 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -
+				Application version is -1: false
+2017-06-27 14:39:36.150 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -
+				Getting all instance registry info from the eureka server
+2017-06-27 14:39:36.200 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -
+				The response status is 200
+2017-06-27 14:41:06.595 [main] INFO  com.faceye.component.Application -
+				No active profile set, falling back to default profiles: default
+2017-06-27 14:41:16.917 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 14:41:16.932 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 14:41:18.058 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Initializing Eureka in region us-east-1
+2017-06-27 14:41:18.864 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON encoding codec LegacyJacksonJson
+2017-06-27 14:41:18.865 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON decoding codec LegacyJacksonJson
+2017-06-27 14:41:19.016 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML encoding codec XStreamXml
+2017-06-27 14:41:19.016 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML decoding codec XStreamXml
+2017-06-27 14:41:19.352 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+				Resolving eureka endpoints via configuration
+2017-06-27 14:41:19.730 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Disable delta property : false
+2017-06-27 14:41:19.730 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Single vip registry refresh property : null
+2017-06-27 14:41:19.731 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Force full registry fetch : false
+2017-06-27 14:41:19.731 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Application is null : false
+2017-06-27 14:41:19.731 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Registered Applications size is zero : true
+2017-06-27 14:41:19.731 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Application version is -1: true
+2017-06-27 14:41:19.732 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Getting all instance registry info from the eureka server
+2017-06-27 14:41:19.875 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				The response status is 200
+2017-06-27 14:41:19.880 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Starting heartbeat executor: renew interval is: 30
+2017-06-27 14:41:19.886 [main] INFO  c.n.discovery.InstanceInfoReplicator -
+				InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-27 14:41:19.890 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498545679890 with initial instances count: 1
+2017-06-27 14:41:19.926 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Saw local status change event StatusChangeEvent [timestamp=1498545679926, current=UP, previous=STARTING]
+2017-06-27 14:41:20.060 [main] INFO  com.faceye.component.Application -
+				Started Application in 18.196 seconds (JVM running for 19.085)
+2017-06-27 14:41:20.078 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:8887: registering service...
+2017-06-27 14:41:20.164 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:8887 - registration status: 204
+2017-06-27 14:42:42.187 [main] INFO  com.faceye.component.Application -
+				No active profile set, falling back to default profiles: default
+2017-06-27 14:42:52.873 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 14:42:52.882 [main] INFO  c.n.c.sources.URLConfigurationSource -
+				To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-06-27 14:42:53.407 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Initializing Eureka in region us-east-1
+2017-06-27 14:42:54.435 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON encoding codec LegacyJacksonJson
+2017-06-27 14:42:54.435 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using JSON decoding codec LegacyJacksonJson
+2017-06-27 14:42:54.644 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML encoding codec XStreamXml
+2017-06-27 14:42:54.644 [main] INFO  c.n.d.p.DiscoveryJerseyProvider -
+				Using XML decoding codec XStreamXml
+2017-06-27 14:42:54.971 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+				Resolving eureka endpoints via configuration
+2017-06-27 14:42:55.464 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Disable delta property : false
+2017-06-27 14:42:55.464 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Single vip registry refresh property : null
+2017-06-27 14:42:55.464 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Force full registry fetch : false
+2017-06-27 14:42:55.464 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Application is null : false
+2017-06-27 14:42:55.464 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Registered Applications size is zero : true
+2017-06-27 14:42:55.464 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Application version is -1: true
+2017-06-27 14:42:55.464 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Getting all instance registry info from the eureka server
+2017-06-27 14:42:55.603 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				The response status is 200
+2017-06-27 14:42:55.605 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Starting heartbeat executor: renew interval is: 30
+2017-06-27 14:42:55.608 [main] INFO  c.n.discovery.InstanceInfoReplicator -
+				InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-06-27 14:42:55.612 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1498545775611 with initial instances count: 1
+2017-06-27 14:42:55.668 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Saw local status change event StatusChangeEvent [timestamp=1498545775668, current=UP, previous=STARTING]
+2017-06-27 14:42:55.674 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:8887: registering service...
+2017-06-27 14:42:55.763 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_CLOCK-PROVIDER/sz-songhaipeng.aspire.aspire-tech.com:clock-provider:8887 - registration status: 204
+2017-06-27 14:42:55.793 [main] INFO  com.faceye.component.Application -
+				Started Application in 18.287 seconds (JVM running for 19.084)
