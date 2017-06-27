@@ -14,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication(scanBasePackages = { "com.faceye" })
 @EnableDiscoveryClient
-@EnableFeignClients
+//@EnableFeignClients
 @EnableCircuitBreaker
 public class Application {
 	private static Logger logger=LoggerFactory.getLogger(Application.class);
