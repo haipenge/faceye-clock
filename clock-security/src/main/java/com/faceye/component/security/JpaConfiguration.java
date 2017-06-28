@@ -1,4 +1,4 @@
-package com.faceye.cloud.service.impl;
+package com.faceye.component.security;
 
 import java.util.Properties;
 
