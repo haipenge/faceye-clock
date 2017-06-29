@@ -68,30 +68,34 @@ public class OAuth2AuthorizationServerConfiguration extends AuthorizationServerC
 	@Autowired
 	private AuthenticationManager authenticationManager = null;
 	private final static String API_RESOURCE_ID = "api-resource";
-	
-//	private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
-//	@Override
+	// private BCryptPasswordEncoder passwordEncoder = new
+	// BCryptPasswordEncoder();
+
+	// @Override
 	public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
 		security.checkTokenAccess("permitAll()");
 		security.allowFormAuthenticationForClients();
 		security.accessDeniedHandler(oauth2AccessDeniedHandler());
 		security.addTokenEndpointAuthenticationFilter(clientCredentialsTokenEndpointFilter());
 		security.authenticationEntryPoint(oauth2AuthenticationEntryPoint());
-		
+
 	}
 
 	@Override
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 		clients.withClientDetails(clientDetails());
-		
+
 	}
 
 	@Override
 	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-		endpoints.tokenStore(tokenStore()).authenticationManager(authenticationManager).userApprovalHandler(oauthUserApprovalHandler()).authorizationCodeServices(authorizationCodeServices()).tokenServices(tokenServices()).setClientDetailsService(clientDetails());
+		endpoints.tokenStore(tokenStore()).authenticationManager(authenticationManager)
+				.userApprovalHandler(oauthUserApprovalHandler()).authorizationCodeServices(authorizationCodeServices())
+				.tokenServices(tokenServices()).setClientDetailsService(clientDetails());
 	}
-	///////////////////////////////// Bean Define//////////////////////////////////////////////////////////
+	///////////////////////////////// Bean
+	///////////////////////////////// Define//////////////////////////////////////////////////////////
 
 	@Bean
 	public TokenStore tokenStore() {
@@ -132,7 +136,8 @@ public class OAuth2AuthorizationServerConfiguration extends AuthorizationServerC
 
 	@Bean
 	public ClientDetailsUserDetailsService oauth2ClientDetailsUserService() {
-		ClientDetailsUserDetailsService oauth2ClientDetailsUserService = new ClientDetailsUserDetailsService(clientDetails());
+		ClientDetailsUserDetailsService oauth2ClientDetailsUserService = new ClientDetailsUserDetailsService(
+				clientDetails());
 		return oauth2ClientDetailsUserService;
 	}
 
@@ -189,10 +194,10 @@ public class OAuth2AuthorizationServerConfiguration extends AuthorizationServerC
 		store.setTokenStore(tokenStore());
 		return store;
 	}
-	
 
 	// public DaoAuthenticationProvider daoAuthenticationProvider(){
-	// DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
+	// DaoAuthenticationProvider daoAuthenticationProvider = new
+	// DaoAuthenticationProvider();
 	// daoAuthenticationProvider.setPasswordEncoder(passwordEncoder);
 	// daoAuthenticationProvider.setSaltSource(saltSource);
 	// daoAuthenticationProvider.setUserDetailsService(userService);
@@ -206,24 +211,25 @@ public class OAuth2AuthorizationServerConfiguration extends AuthorizationServerC
 	//// Resource resource=new Resource("classpath*:/*.properties");
 	//// resources.add(resource);
 	////// locations.add("classpath*:/*.properties");
-	//// property.setLocations(resources.toArray(new Resource[resources.size()]));
+	//// property.setLocations(resources.toArray(new
+	// Resource[resources.size()]));
 	// return property;
 	// }
 	// @Bean
 	// public PreferencesPlaceholderConfigurer propertyConfigurer(){
-	// PreferencesPlaceholderConfigurer propertyConfigurer=new PreferencesPlaceholderConfigurer();
+	// PreferencesPlaceholderConfigurer propertyConfigurer=new
+	// PreferencesPlaceholderConfigurer();
 	//// propertyConfigurer.setProperties(property());
 	// return propertyConfigurer;
 	// }
-	
-	
+
 	@Configuration
 	@EnableResourceServer
 	public static class ResourceServerConfiguration extends ResourceServerConfigurerAdapter {
 		@Autowired
 		private DefaultTokenServices tokenServices = null;
 
-//		@Override
+		// @Override
 		public void configure(ResourceServerSecurityConfigurer resources) {
 			resources.resourceId(API_RESOURCE_ID);
 			resources.tokenServices(tokenServices);
@@ -231,9 +237,28 @@ public class OAuth2AuthorizationServerConfiguration extends AuthorizationServerC
 
 		@Override
 		public void configure(HttpSecurity http) throws Exception {
-//			http.authorizeRequests().anyRequest().authenticated();
-			http.requestMatchers().antMatchers("/api").and().authorizeRequests().antMatchers("/api").access("#oauth2.hasScope('read')");
-//			http.requestMatchers().antMatchers("/oauth/token**").and().
+			// http.csrf().disable();
+			// http.cors().disable();
+			// http.authorizeRequests().anyRequest().authenticated();
+			http.cors().disable().csrf().disable().authorizeRequests().regexMatchers("/shutdown*").permitAll().and()
+					.requestMatchers().antMatchers("/api").and().authorizeRequests().antMatchers("/api")
+					.access("#oauth2.hasScope('read')");
+			// http.requestMatchers().antMatchers("/oauth/token**").and().
+
+			// http.
+			// addFilter(headerAdminFilter).
+			// authorizeRequests().
+			// regexMatchers("/login.*").permitAll().
+			// regexMatchers("/api.*").fullyAuthenticated().
+			// regexMatchers("/jolokia.*").hasRole(ADMINISTRATOR).
+			// regexMatchers("/appadmin.*").hasRole(ADMINISTRATOR).
+			// regexMatchers(".*").fullyAuthenticated().
+			// and().
+			// formLogin().loginPage("/login").successHandler(new
+			// RedirectingAuthenticationSuccessHandler()).
+			// and().
+			// exceptionHandling().authenticationEntryPoint(new
+			// RestAwareAuthenticationEntryPoint("/login"));
 		}
 
 	}
