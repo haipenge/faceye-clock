@@ -1,4 +1,4 @@
-package com.faceye.cloud.service.impl;
+package com.faceye.component.gateway.service.impl;
 
 import javax.servlet.http.HttpServletRequest;
 

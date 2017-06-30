@@ -44,6 +44,7 @@ import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 import org.springframework.security.web.access.expression.WebExpressionVoter;
+import org.springframework.web.filter.CorsFilter;
 
 import com.faceye.component.security.web.service.UserService;
 
@@ -74,7 +75,7 @@ public class OAuth2AuthorizationServerConfiguration extends AuthorizationServerC
 
 	// @Override
 	public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-		security.checkTokenAccess("permitAll()");
+		security.checkTokenAccess("permitAll()").checkTokenAccess("isAuthenticated()");
 		security.allowFormAuthenticationForClients();
 		security.accessDeniedHandler(oauth2AccessDeniedHandler());
 		security.addTokenEndpointAuthenticationFilter(clientCredentialsTokenEndpointFilter());
@@ -237,14 +238,16 @@ public class OAuth2AuthorizationServerConfiguration extends AuthorizationServerC
 
 		@Override
 		public void configure(HttpSecurity http) throws Exception {
-			// http.csrf().disable();
+//			 http.csrf().disable();
 			// http.cors().disable();
+			 http.authorizeRequests().regexMatchers("/shutdown*").permitAll().regexMatchers("/index*").permitAll().regexMatchers("/api").fullyAuthenticated().and().cors().disable();
+			 
 			// http.authorizeRequests().anyRequest().authenticated();
-			http.cors().disable().csrf().disable().authorizeRequests().regexMatchers("/shutdown*").permitAll().and()
-					.requestMatchers().antMatchers("/api").and().authorizeRequests().antMatchers("/api")
-					.access("#oauth2.hasScope('read')");
+//			http.authorizeRequests().regexMatchers("/shutdown*").permitAll().and()
+//					.requestMatchers().antMatchers("/api").and().authorizeRequests().antMatchers("/api")
+//					.access("#oauth2.hasScope('read')");
 			// http.requestMatchers().antMatchers("/oauth/token**").and().
-
+CorsFilter f=null;
 			// http.
 			// addFilter(headerAdminFilter).
 			// authorizeRequests().
@@ -259,6 +262,7 @@ public class OAuth2AuthorizationServerConfiguration extends AuthorizationServerC
 			// and().
 			// exceptionHandling().authenticationEntryPoint(new
 			// RestAwareAuthenticationEntryPoint("/login"));
+
 		}
 
 	}

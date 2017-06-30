@@ -1,5 +1,8 @@
 package com.faceye.component.api.service.impl;
 
+import java.net.URI;
+import java.util.HashMap;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -36,6 +39,17 @@ public class NoteServiceImpl implements NoteService {
 
 	public String addServiceFallback(String title, String text) {
 		return "error";
+	}
+
+	@Override
+	public String get(Long id) {
+		HttpHeaders header = new HttpHeaders();
+		header.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+		String url = "http://clock-provider/note/"+id;
+		URI uri=null;
+//		this.restTemplate.getfor
+		String res=this.restTemplate.getForEntity(url, String.class, new HashMap()).getBody().toString();
+		return res;
 	}
 
 }
