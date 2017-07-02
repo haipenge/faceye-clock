@@ -16,13 +16,15 @@ import com.faceye.component.security.web.util.SecurityUtil;
 @EnableJpaAuditing(auditorAwareRef = "auditorAware")
 public class Application {
 	public static void main(String[] args) {
-//		ResponseEntity e=null;
-//		SpringApplication.run(Application.class, args);
 		new SpringApplicationBuilder(Application.class).web(true).run(args);
 	}
 	@Bean(name = "auditorAware")
 	public AuditorAware<String> auditorAware() {
 		return ()-> SecurityUtil.getCurrentUserName();
 	}
-	
+//	@Bean
+//	  HeaderHttpSessionStrategy sessionStrategy() {
+//	    return new HeaderHttpSessionStrategy();
+//	  }
+//	
 }

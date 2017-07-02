@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
+import org.springframework.security.access.AccessDecisionManager;
+import org.springframework.security.access.AccessDecisionVoter;
 import org.springframework.security.access.vote.AuthenticatedVoter;
 import org.springframework.security.access.vote.RoleVoter;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -16,8 +18,11 @@ import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.authentication.dao.ReflectionSaltSource;
 import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
+import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
 
+import com.faceye.component.security.web.service.ResourceService;
 import com.faceye.component.security.web.service.UserService;
+import com.faceye.component.security.web.service.impl.SecurityAccessDecisionManager;
 
 @Configuration
 @Order(1)
@@ -31,6 +36,13 @@ public class SecurityBasicConfiguration {
 	private UserService userService = null;
 	private DaoAuthenticationProvider daoAuthenticationProvider=null;
 	private AuthenticationManager authenticationManager=null;
+	
+	@Autowired
+	@Qualifier("webResourceService")
+	private ResourceService resourceService = null;
+	
+	private FilterSecurityInterceptor filterSecurityInterceptor=null;
+	private AccessDecisionManager accessDecisionManager = null;
 	@Bean
 	public RoleVoter roleVoter(){
 		roleVoter=new RoleVoter();
@@ -69,5 +81,22 @@ public class SecurityBasicConfiguration {
 		daoAuthenticationProvider.setSaltSource(saltSource());
 		daoAuthenticationProvider.setUserDetailsService(userService);
 		return daoAuthenticationProvider;
+	}
+	@Bean
+	public FilterSecurityInterceptor filterSecurityInterceptor() {
+		filterSecurityInterceptor = new FilterSecurityInterceptor();
+		filterSecurityInterceptor.setSecurityMetadataSource(resourceService);
+		filterSecurityInterceptor.setAuthenticationManager(authenticationManager);
+		filterSecurityInterceptor.setAccessDecisionManager(accessDecisionManager());
+		return filterSecurityInterceptor;
+	}
+	
+	@Bean
+	public AccessDecisionManager accessDecisionManager() {
+		List<AccessDecisionVoter<? extends Object>> voters = new ArrayList<AccessDecisionVoter<? extends Object>>();
+		voters.add(roleVoter);
+		voters.add(authenticatedVoter);
+		accessDecisionManager = new SecurityAccessDecisionManager(voters);
+		return accessDecisionManager;
 	}
 }

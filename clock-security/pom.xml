@@ -17,6 +17,7 @@
 	</parent>
 	<properties>
 		<java.version>1.8</java.version>
+		<spring-boot-starter-freemarker.version>1.5.4.RELEASE</spring-boot-starter-freemarker.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -38,7 +39,7 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
-		</dependency> 
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
@@ -76,13 +77,42 @@
 			<artifactId>faceye-security-web-manager</artifactId>
 			<version>1.0</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-freemarker -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-freemarker</artifactId>
+			<version>${spring-boot-starter-freemarker.version}</version>
+		</dependency>
+
+
+		<!-- <dependency> <groupId>org.springframework.session</groupId> <artifactId>spring-session</artifactId> </dependency> <dependency> <groupId>org.springframework.boot</groupId> 
+			<artifactId>spring-boot-starter-data-redis</artifactId> </dependency> -->
 	</dependencies>
 	<build>
+		<resources>
+			<resource>
+				<directory>${project.basedir}/src/main/resources</directory>
+			</resource>
+			<resource>
+				<directory>${project.build.directory}/generated-resources</directory>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!-- <plugin> <artifactId>maven-resources-plugin</artifactId> <executions> <execution> <id>copy-resources</id> <phase>validate</phase> <goals> 
+				<goal>copy-resources</goal> </goals> <configuration> <outputDirectory>${basedir}/target/wro</outputDirectory> <resources> <resource> <directory>src/main/wro</directory> 
+				<filtering>true</filtering> </resource> </resources> </configuration> </execution> </executions> </plugin> <plugin> <groupId>ro.isdc.wro4j</groupId> 
+				<artifactId>wro4j-maven-plugin</artifactId> <version>1.8.0</version> <executions> <execution> <phase>generate-resources</phase> <goals> <goal>run</goal> 
+				</goals> </execution> </executions> <configuration> <wroManagerFactory>ro.isdc.wro.maven.plugin.manager.factory.ConfigurableWroManagerFactory</wroManagerFactory> 
+				<cssDestinationFolder>${project.build.directory}/generated-resources/static/css</cssDestinationFolder> <jsDestinationFolder>${project.build.directory}/generated-resources/static/js</jsDestinationFolder> 
+				<wroFile>${project.build.directory}/wro/wro.xml</wroFile> <extraConfigFile>${project.build.directory}/wro/wro.properties</extraConfigFile> <contextFolder>${project.build.directory}/wro</contextFolder> 
+				</configuration> <dependencies> <dependency> <groupId>org.webjars</groupId> <artifactId>jquery</artifactId> <version>${jquery.version}</version> 
+				</dependency> <dependency> <groupId>org.webjars</groupId> <artifactId>angularjs</artifactId> <version>${angularjs.version}</version> </dependency> 
+				<dependency> <groupId>org.webjars</groupId> <artifactId>bootstrap</artifactId> <version>${bootstrap.version}</version> </dependency> </dependencies> 
+				</plugin> -->
 		</plugins>
 	</build>
 
