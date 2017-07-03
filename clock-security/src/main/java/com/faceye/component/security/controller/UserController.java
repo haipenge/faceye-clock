@@ -5,11 +5,11 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
-@RequestMapping("/security/user")
+@RequestMapping("/user")
 public class UserController {
 
 	@RequestMapping("/login")
 	public String login(HttpServletRequest request){
-		return "security/user/login";
+		return "security/user/login__";
 	}
 }

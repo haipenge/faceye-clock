@@ -18,14 +18,19 @@ public class DefaultController {
 	public String index() {
 		return "index";
 	}
-
-	@RequestMapping("/index.html")
-	public String indexHtml() {
-		return "index";
-	}
 	
-	@RequestMapping("/default.html")
-	public String home(){
-		return "index";
-	}
+//	@RequestMapping("/error")
+//	public String error(){
+//	   return "error/error";
+//	}
+
+//	@RequestMapping("/index")
+//	public String indexHtml() {
+//		return "index";
+//	}
+//	
+//	@RequestMapping("/default")
+//	public String home(){
+//		return "index";
+//	}
 }

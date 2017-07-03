@@ -43,7 +43,6 @@ import org.springframework.security.oauth2.provider.request.DefaultOAuth2Request
 import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
-import org.springframework.security.web.access.AccessDeniedHandlerImpl;
 import org.springframework.security.web.access.expression.WebExpressionVoter;
 import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
@@ -52,9 +51,9 @@ import org.springframework.security.web.authentication.logout.SecurityContextLog
 import org.springframework.security.web.authentication.logout.SimpleUrlLogoutSuccessHandler;
 import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
-import org.springframework.web.filter.CorsFilter;
 
 import com.faceye.component.security.web.service.UserService;
+import com.faceye.component.security.web.service.impl.AccessDeniedHandlerImpl;
 
 @Configuration
 @EnableAuthorizationServer
@@ -76,7 +75,7 @@ public class OAuth2AuthorizationServerConfiguration extends AuthorizationServerC
 	private DaoAuthenticationProvider authenticationProvider = null;
 	@Autowired
 	private AuthenticationManager authenticationManager = null;
-	
+
 	// private BCryptPasswordEncoder passwordEncoder = new
 	// BCryptPasswordEncoder();
 
@@ -230,18 +229,15 @@ public class OAuth2AuthorizationServerConfiguration extends AuthorizationServerC
 	//// propertyConfigurer.setProperties(property());
 	// return propertyConfigurer;
 	// }
-	
-	
+
 	@Configuration
 	@EnableResourceServer
-//	@Order(3)
-	public  class ResourceServerConfiguration extends ResourceServerConfigurerAdapter {
+	public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter {
 		@Autowired
 		private DefaultTokenServices tokenServices = null;
 		private final static String API_RESOURCE_ID = "api-resource";
 		@Autowired
-		public  FilterSecurityInterceptor filterSecurityInterceptor = null;
-
+		public FilterSecurityInterceptor filterSecurityInterceptor = null;
 
 		// @Override
 		public void configure(ResourceServerSecurityConfigurer resources) {
@@ -249,35 +245,65 @@ public class OAuth2AuthorizationServerConfiguration extends AuthorizationServerC
 			resources.tokenServices(tokenServices);
 		}
 
-//		@Override
-//		public void configure(HttpSecurity http) throws Exception {
-//			 http.csrf().disable();
+		@Override
+		public void configure(HttpSecurity http) throws Exception {
+			// http.csrf().disable();
 			// http.cors().disable();
-			 
-//			http.authorizeRequests().regexMatchers("/*").authenticated().antMatchers("/index.html*", "/security/user/login*", "/shutdown*").permitAll().and().formLogin().loginPage("/security/user/login").permitAll();
-			
-			
-//			http.addFilterBefore(filterSecurityInterceptor, FilterSecurityInterceptor.class).authorizeRequests().anyRequest().authenticated()
-//			.antMatchers("/index.html*", "/security/user/login*", "/shutdown*").permitAll()
-//			.and().formLogin().loginPage("/security/user/login").permitAll()
-//			.failureHandler(new SimpleUrlAuthenticationFailureHandler("/security/user/login?error=failure"))
-//			.successHandler(new SimpleUrlAuthenticationSuccessHandler("/index.html"))
-//			.and().logout()
-//			.logoutRequestMatcher(new AntPathRequestMatcher("/security/user/logout","GET")).logoutSuccessUrl("/index.html?action=logout_success")
-//			.logoutSuccessHandler(new SimpleUrlLogoutSuccessHandler()).invalidateHttpSession(true).addLogoutHandler(new SecurityContextLogoutHandler())
-//			.and().exceptionHandling().
-//			accessDeniedHandler(new AccessDeniedHandlerImpl()).accessDeniedPage("/security/user/login?error=forbiden")
-//			.and().csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
-//			.and().cors();
-			 
-			 //http.authorizeRequests().anyRequest().fullyAuthenticated();
-			 
+
+			// http.authorizeRequests().regexMatchers("/*").authenticated().antMatchers("/index.html*",
+			// "/security/user/login*",
+			// "/shutdown*").permitAll().and().formLogin().loginPage("/security/user/login").permitAll();
+			// http.authorizeRequests().regexMatchers("/shutdown").permitAll();
+			// .and().authorizeRequests().antMatchers("/api").access("#oauth2.hasScope('read')");
+
+			// http.authorizeRequests().antMatchers("/",
+			// "/user/login").permitAll().anyRequest().authenticated().and()
+			// .formLogin().loginPage("/user/login").permitAll()
+			// .failureHandler(new
+			// SimpleUrlAuthenticationFailureHandler("/user/login?error=failure"))
+			// .successHandler(new
+			// SimpleUrlAuthenticationSuccessHandler("/")).and().logout()
+			// .logoutRequestMatcher(new AntPathRequestMatcher("/user/logout",
+			// "GET"))
+			// .logoutSuccessUrl("/?action=logout_success")
+			// .logoutSuccessHandler(new
+			// SimpleUrlLogoutSuccessHandler()).invalidateHttpSession(true)
+			// .addLogoutHandler(new
+			// SecurityContextLogoutHandler()).and().exceptionHandling()
+			// .accessDeniedHandler(new
+			// AccessDeniedHandlerImpl()).accessDeniedPage("/user/login?error=forbiden")
+			// .and().csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()).and().cors().and()
+			// .addFilterBefore(filterSecurityInterceptor,
+			// FilterSecurityInterceptor.class);
+
+			// ;
+			// .antMatchers("/index.html*", "/security/user/login*",
+			// "/shutdown*").permitAll()
+			// .and().formLogin().loginPage("/security/user/login").permitAll()
+			// .failureHandler(new
+			// SimpleUrlAuthenticationFailureHandler("/security/user/login?error=failure"))
+			// .successHandler(new
+			// SimpleUrlAuthenticationSuccessHandler("/index.html"))
+			// .and().logout()
+			// .logoutRequestMatcher(new
+			// AntPathRequestMatcher("/security/user/logout","GET")).logoutSuccessUrl("/index.html?action=logout_success")
+			// .logoutSuccessHandler(new
+			// SimpleUrlLogoutSuccessHandler()).invalidateHttpSession(true).addLogoutHandler(new
+			// SecurityContextLogoutHandler())
+			// .and().exceptionHandling().
+			// accessDeniedHandler(new
+			// AccessDeniedHandlerImpl()).accessDeniedPage("/security/user/login?error=forbiden")
+			// .and().csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
+			// .and().cors();
+
+			// http.authorizeRequests().anyRequest().fullyAuthenticated();
+
 			// http.authorizeRequests().anyRequest().authenticated();
-//			http.authorizeRequests().regexMatchers("/shutdown*").permitAll().and()
-//					.requestMatchers().antMatchers("/api").and().authorizeRequests().antMatchers("/api")
-//					.access("#oauth2.hasScope('read')");
+
+			// authorizeRequests().regexMatchers("/shutdown*").permitAll().and()
+			http.authorizeRequests().antMatchers("/api").access("#oauth2.hasScope('read')");
 			// http.requestMatchers().antMatchers("/oauth/token**").and().
-	//CorsFilter f=null;
+			// CorsFilter f=null;
 			// http.
 			// addFilter(headerAdminFilter).
 			// authorizeRequests().
@@ -293,9 +319,8 @@ public class OAuth2AuthorizationServerConfiguration extends AuthorizationServerC
 			// exceptionHandling().authenticationEntryPoint(new
 			// RestAwareAuthenticationEntryPoint("/login"));
 
-//		}
+		}
 
 	}
 
-	
 }
