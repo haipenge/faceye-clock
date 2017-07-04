@@ -13,14 +13,10 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.web.access.AccessDeniedHandlerImpl;
 import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
-import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
-import org.springframework.security.web.authentication.logout.SimpleUrlLogoutSuccessHandler;
 import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
-import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import com.faceye.component.security.web.service.ResourceService;
 import com.faceye.component.security.web.service.UserService;
@@ -53,55 +49,40 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		super.configure(http);
-		// .cors().disable().csrf().disable()
-		// http.httpBasic().and().addFilterBefore(filterSecurityInterceptor(),
-		// FilterSecurityInterceptor.class).authorizeRequests()
-		// .antMatchers("/index.html", "/security/user/login",
-		// "/").permitAll().anyRequest().authenticated().and().csrf()
-		// .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()).and().cors();
-
-		// .loginPage("/security/user/login")
-		http.authorizeRequests().antMatchers("/", "/user/login", "/static/**").permitAll().and().formLogin()
-				.loginPage("/user/login").permitAll().successHandler(new SimpleUrlAuthenticationSuccessHandler("/"))
+		////////////////////////////////// 简单基础登陆////////////////////////////////////////
+		// http.authorizeRequests().anyRequest().authenticated().and().formLogin().and().httpBasic();
+		////////////////////////////////////////////////////////////////////////////////////////////
+		http.authorizeRequests().anyRequest().authenticated().and().formLogin().loginPage("/user/login").permitAll()
+				.successHandler(new SimpleUrlAuthenticationSuccessHandler("/"))
 				.failureHandler(new SimpleUrlAuthenticationFailureHandler("/user/login?error=failure")).and()
-				.exceptionHandling().accessDeniedHandler(new AccessDeniedHandlerImpl())
-				.accessDeniedPage("/user/login?error=forbiden").and().logout()
-				.logoutRequestMatcher(new AntPathRequestMatcher("/user/logout", "GET")).permitAll()
-				.logoutSuccessUrl("/user/login?action=logout_success")
-				.logoutSuccessHandler(new SimpleUrlLogoutSuccessHandler()).invalidateHttpSession(true)
-				.addLogoutHandler(new SecurityContextLogoutHandler()).and().exceptionHandling()
-				.accessDeniedHandler(new AccessDeniedHandlerImpl())
-				.accessDeniedPage("/user/login?error=forbiden")
-				.and().csrf().disable()
-//				.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()).and().cors().and()
-				.addFilterBefore(filterSecurityInterceptor, FilterSecurityInterceptor.class);
+				.httpBasic().and().csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()).and()
+				.cors().and().addFilterBefore(filterSecurityInterceptor, FilterSecurityInterceptor.class);
 
-		// and().authorizeRequests().anyRequest().authenticated()
-		// http.authorizeRequests().antMatchers("/index.html**",
-		// "/security/user/login**", "/shutdown**").permitAll()
-		// .and().formLogin().loginPage("/security/user/login").permitAll()
+		// http.httpBasic().and().authorizeRequests().anyRequest().authenticated().and().formLogin()
+		// .loginPage("/user/login").permitAll().successHandler(new
+		// SimpleUrlAuthenticationSuccessHandler("/"))
 		// .failureHandler(new
-		// SimpleUrlAuthenticationFailureHandler("/security/user/login?error=failure"))
-		// .successHandler(new
-		// SimpleUrlAuthenticationSuccessHandler("/index.html"))
-		// .and().logout()
-		// .logoutRequestMatcher(new
-		// AntPathRequestMatcher("/security/user/logout","GET")).logoutSuccessUrl("/index.html?action=logout_success")
+		// SimpleUrlAuthenticationFailureHandler("/user/login?error=failure")).and()
+		// .exceptionHandling().accessDeniedHandler(new
+		// AccessDeniedHandlerImpl())
+		// .accessDeniedPage("/user/login?error=forbiden").and().logout()
+		// .logoutRequestMatcher(new AntPathRequestMatcher("/user/logout",
+		// "GET")).permitAll()
+		// .logoutSuccessUrl("/user/login?action=logout_success")
 		// .logoutSuccessHandler(new
-		// SimpleUrlLogoutSuccessHandler()).invalidateHttpSession(true).addLogoutHandler(new
-		// SecurityContextLogoutHandler())
-		// .and().exceptionHandling().
-		// accessDeniedHandler(new
-		// AccessDeniedHandlerImpl()).accessDeniedPage("/security/user/login?error=forbiden")
-		// .and().csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()).and().cors().and().addFilterBefore(filterSecurityInterceptor,
-		// FilterSecurityInterceptor.class)
-		// ;
+		// SimpleUrlLogoutSuccessHandler()).invalidateHttpSession(true)
+		// .addLogoutHandler(new
+		// SecurityContextLogoutHandler()).and().exceptionHandling()
+		// .accessDeniedHandler(new
+		// AccessDeniedHandlerImpl()).accessDeniedPage("/user/login?error=forbiden").and()
+		// .csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()).and().cors().and()
+		// .addFilterBefore(filterSecurityInterceptor,
+		// FilterSecurityInterceptor.class);
 	}
 
 	@Override
 	public void configure(WebSecurity web) throws Exception {
-		web.ignoring().antMatchers("/favor.ico", "**/**/*.js","**/**/*.css","**/**/*.png","**/**/*.jpg", "/shutdown", "/user/login");
+		web.ignoring().antMatchers("/", "/favor.ico", "/static/**", "/shutdown", "/user/login");
 		super.configure(web);
 	}
 

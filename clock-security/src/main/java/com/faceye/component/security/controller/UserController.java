@@ -10,6 +10,6 @@ public class UserController {
 
 	@RequestMapping("/login")
 	public String login(HttpServletRequest request){
-		return "security/user/login__";
+		return "security/user/login";
 	}
 }
