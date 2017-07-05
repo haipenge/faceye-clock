@@ -16,7 +16,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
-import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
 import com.faceye.component.security.web.service.ResourceService;
 import com.faceye.component.security.web.service.UserService;
@@ -50,13 +49,21 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		////////////////////////////////// 简单基础登陆////////////////////////////////////////
-		// http.authorizeRequests().anyRequest().authenticated().and().formLogin().and().httpBasic();
-		////////////////////////////////////////////////////////////////////////////////////////////
-		http.authorizeRequests().anyRequest().authenticated().and().formLogin().loginPage("/user/login").permitAll()
+		// csrf().disable().cors().disable()
+		http.addFilterBefore(filterSecurityInterceptor, FilterSecurityInterceptor.class).authorizeRequests()
+				.anyRequest().authenticated().and().formLogin().loginPage("/user/login").permitAll()
 				.successHandler(new SimpleUrlAuthenticationSuccessHandler("/"))
-				.failureHandler(new SimpleUrlAuthenticationFailureHandler("/user/login?error=failure")).and()
-				.httpBasic().and().csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()).and()
-				.cors().and().addFilterBefore(filterSecurityInterceptor, FilterSecurityInterceptor.class);
+				.failureHandler(new SimpleUrlAuthenticationFailureHandler("/user/login?error=failure"));
+		////////////////////////////////////////////////////////////////////////////////////////////
+
+		// http.authorizeRequests().anyRequest().authenticated().and().formLogin().loginPage("/user/login").permitAll()
+		// .successHandler(new SimpleUrlAuthenticationSuccessHandler("/"))
+		// .failureHandler(new
+		// SimpleUrlAuthenticationFailureHandler("/user/login?error=failure")).and()
+		// .httpBasic().and().csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()).and()
+		// .cors().and().rememberMe().and()
+		// .addFilterBefore(filterSecurityInterceptor,
+		// FilterSecurityInterceptor.class);
 
 		// http.httpBasic().and().authorizeRequests().anyRequest().authenticated().and().formLogin()
 		// .loginPage("/user/login").permitAll().successHandler(new
@@ -82,7 +89,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Override
 	public void configure(WebSecurity web) throws Exception {
-		web.ignoring().antMatchers("/", "/favor.ico", "/static/**", "/shutdown", "/user/login");
+		web.ignoring().antMatchers("/", "/favor.ico", "/login", "/static/**", "/shutdown", "/user/login");
 		super.configure(web);
 	}
 

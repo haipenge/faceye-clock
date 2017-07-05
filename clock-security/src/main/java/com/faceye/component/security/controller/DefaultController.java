@@ -24,10 +24,10 @@ public class DefaultController {
 //	   return "error/error";
 //	}
 
-//	@RequestMapping("/index")
-//	public String indexHtml() {
-//		return "index";
-//	}
+	@RequestMapping("/index")
+	public String indexHtml() {
+		return "index";
+	}
 //	
 //	@RequestMapping("/default")
 //	public String home(){

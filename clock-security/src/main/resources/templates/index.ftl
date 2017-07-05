@@ -22,6 +22,7 @@
 				<li><a href="#">功能看板</a></li>
 				<li><a href="#">设置</a></li>
 				<li><a href="#">个人资料 </a></li>
+				<li><a href="/user/login">登陆</a></li>
 				<li><a href="/user/logout">退出</a></li>
 				<li><a href="#">帮助</a></li>
 			</ul>
