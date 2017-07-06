@@ -301,6 +301,7 @@ public class OAuth2AuthorizationServerConfiguration extends AuthorizationServerC
 			// http.authorizeRequests().anyRequest().authenticated();
 
 			// authorizeRequests().regexMatchers("/shutdown*").permitAll().and()
+			logger.debug(">>FaceYe --> run in oauth2 oauthorization server configuration.");
 			http.authorizeRequests().antMatchers("/api").access("#oauth2.hasScope('read')");
 			// http.requestMatchers().antMatchers("/oauth/token**").and().
 			// CorsFilter f=null;

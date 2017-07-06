@@ -16,9 +16,13 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
+import org.springframework.security.web.authentication.logout.SimpleUrlLogoutSuccessHandler;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import com.faceye.component.security.web.service.ResourceService;
 import com.faceye.component.security.web.service.UserService;
+import com.faceye.component.security.web.service.impl.AccessDeniedHandlerImpl;
 
 @Configuration
 @EnableWebSecurity
@@ -50,10 +54,18 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		////////////////////////////////// 简单基础登陆////////////////////////////////////////
 		// csrf().disable().cors().disable()
-		http.addFilterBefore(filterSecurityInterceptor, FilterSecurityInterceptor.class).authorizeRequests()
-				.anyRequest().authenticated().and().formLogin().loginPage("/user/login").permitAll()
-				.successHandler(new SimpleUrlAuthenticationSuccessHandler("/"))
-				.failureHandler(new SimpleUrlAuthenticationFailureHandler("/user/login?error=failure"));
+		http.csrf().disable().cors().disable()
+				.addFilterBefore(filterSecurityInterceptor, FilterSecurityInterceptor.class).authorizeRequests()
+				.anyRequest().authenticated().and().formLogin().loginPage("/user/login").loginProcessingUrl("/login")
+				.permitAll().successHandler(new SimpleUrlAuthenticationSuccessHandler("/"))
+				.failureHandler(new SimpleUrlAuthenticationFailureHandler("/user/login?error=failure")).and()
+				.exceptionHandling().accessDeniedHandler(new AccessDeniedHandlerImpl())
+				.accessDeniedPage("/user/login?error=forbiden").and().logout()
+				.logoutRequestMatcher(new AntPathRequestMatcher("/user/logout", "GET")).permitAll()
+				.logoutSuccessUrl("/user/login?action=logout_success")
+				.logoutSuccessHandler(new SimpleUrlLogoutSuccessHandler()).invalidateHttpSession(true)
+				.addLogoutHandler(new SecurityContextLogoutHandler()).and().exceptionHandling()
+				.accessDeniedHandler(new AccessDeniedHandlerImpl()).accessDeniedPage("/user/login?error=forbiden");
 		////////////////////////////////////////////////////////////////////////////////////////////
 
 		// http.authorizeRequests().anyRequest().authenticated().and().formLogin().loginPage("/user/login").permitAll()
@@ -89,7 +101,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Override
 	public void configure(WebSecurity web) throws Exception {
-		web.ignoring().antMatchers("/", "/favor.ico", "/login", "/static/**", "/shutdown", "/user/login");
+		web.ignoring().antMatchers("/", "/favor.ico", "/static/**", "/shutdown");
 		super.configure(web);
 	}
 
