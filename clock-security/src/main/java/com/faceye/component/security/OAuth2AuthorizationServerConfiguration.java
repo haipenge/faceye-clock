@@ -121,6 +121,7 @@ public class OAuth2AuthorizationServerConfiguration extends AuthorizationServerC
 	public AuthenticationManager oauth2AuthenticationManager() {
 		OAuth2AuthenticationManager oauth2AuthenticationManager = new OAuth2AuthenticationManager();
 		oauth2AuthenticationManager.setClientDetailsService(clientDetails());
+		
 		oauth2AuthenticationManager.setTokenServices(tokenServices());
 		return oauth2AuthenticationManager;
 	}
@@ -245,7 +246,7 @@ public class OAuth2AuthorizationServerConfiguration extends AuthorizationServerC
 			resources.tokenServices(tokenServices);
 		}
 
-		@Override
+//		@Override
 		public void configure(HttpSecurity http) throws Exception {
 			// http.csrf().disable();
 			// http.cors().disable();
@@ -253,8 +254,9 @@ public class OAuth2AuthorizationServerConfiguration extends AuthorizationServerC
 			// http.authorizeRequests().regexMatchers("/*").authenticated().antMatchers("/index.html*",
 			// "/security/user/login*",
 			// "/shutdown*").permitAll().and().formLogin().loginPage("/security/user/login").permitAll();
-			// http.authorizeRequests().regexMatchers("/shutdown").permitAll();
-			// .and().authorizeRequests().antMatchers("/api").access("#oauth2.hasScope('read')");
+//			 http.authorizeRequests().regexMatchers("/shutdown").permitAll();
+//			 http.authorizeRequests().antMatchers("/api").access("#oauth2.hasScope('read')");
+			 http.authorizeRequests().regexMatchers("/shutdown").permitAll().anyRequest().access("#oauth2.hasScope('read')");
 
 			// http.authorizeRequests().antMatchers("/",
 			// "/user/login").permitAll().anyRequest().authenticated().and()
@@ -301,8 +303,21 @@ public class OAuth2AuthorizationServerConfiguration extends AuthorizationServerC
 			// http.authorizeRequests().anyRequest().authenticated();
 
 			// authorizeRequests().regexMatchers("/shutdown*").permitAll().and()
-			logger.debug(">>FaceYe --> run in oauth2 oauthorization server configuration.");
-			http.authorizeRequests().antMatchers("/api").access("#oauth2.hasScope('read')");
+//			logger.debug(">>FaceYe --> run in oauth2 oauthorization server configuration.");
+			// http.authorizeRequests().antMatchers("/api").access("#oauth2.hasScope('read')");
+
+//			http.csrf().disable().cors().disable()
+//					.addFilterBefore(filterSecurityInterceptor, FilterSecurityInterceptor.class).authorizeRequests()
+//					.anyRequest().authenticated().antMatchers("/api").access("#oauth2.hasScope('read')").and()
+//					.formLogin().loginPage("/user/login").loginProcessingUrl("/login").permitAll()
+//					.failureHandler(new SimpleUrlAuthenticationFailureHandler("/user/login?error=failure")).and()
+//					.exceptionHandling().accessDeniedHandler(new AccessDeniedHandlerImpl())
+//					.accessDeniedPage("/user/login?error=forbiden").and().logout()
+//					.logoutRequestMatcher(new AntPathRequestMatcher("/user/logout", "GET")).permitAll()
+//					.logoutSuccessUrl("/user/login?action=logout_success")
+//					.logoutSuccessHandler(new SimpleUrlLogoutSuccessHandler()).invalidateHttpSession(true)
+//					.addLogoutHandler(new SecurityContextLogoutHandler()).and().exceptionHandling()
+//					.accessDeniedHandler(new AccessDeniedHandlerImpl()).accessDeniedPage("/user/login?error=forbiden");
 			// http.requestMatchers().antMatchers("/oauth/token**").and().
 			// CorsFilter f=null;
 			// http.
@@ -314,12 +329,11 @@ public class OAuth2AuthorizationServerConfiguration extends AuthorizationServerC
 			// regexMatchers("/appadmin.*").hasRole(ADMINISTRATOR).
 			// regexMatchers(".*").fullyAuthenticated().
 			// and().
-			// formLogin().loginPage("/login").successHandler(new
+			// formLogin().logi  nPage("/login").successHandler(new
 			// RedirectingAuthenticationSuccessHandler()).
 			// and().
 			// exceptionHandling().authenticationEntryPoint(new
 			// RestAwareAuthenticationEntryPoint("/login"));
-
 		}
 
 	}
